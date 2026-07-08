@@ -1,0 +1,8 @@
+chip_id,vendor,type,node_nm,fab,flops_notes,memory,interconnect,release_status,global_analog,source_id,confidence
+ascend-950pr,huawei,NPU,<7,smic,"Next-gen Ascend; targeted for scaled <7nm",HBM (indigenous path),"Huawei optical scale-up (8192 processors, 2026)",announced,"H100/H200-class (target)",REF-BW-01,C
+ascend-910x,huawei,NPU,7,smic,"910-series training/inference",HBM,"CloudMatrix scale-up",shipping,"A100/H100-class",REF-BW-01,D
+cambricon-mlu,cambricon,NPU,7,smic/tsmc-legacy,"Siyuan MLU training/inference",HBM/GDDR,,shipping,"A100-class",REF-BW-03,D
+thead-zhenwu,alibaba,ASIC,,,"T-Head Zhenwu; powering 10k-chip DC scaling to 100k",,,"deploying/designing",Nvidia-class,REF-BW-01,C
+kunlun-p,kunlunxin,ASIC,,,"Kunlun P-series",,,shipping,Nvidia-class,REF-BW-01,D
+mtt-gpu,moore-threads,GPU,,,"MTT full-featured GPGPU",GDDR,,shipping,Nvidia-class,REF-SANDS-01,D
+biren-br,biren,GPU,,,"BR-series training GPU",HBM,,sampling,Nvidia-class,REF-SANDS-01,D

@@ -1,0 +1,10 @@
+model_id,developer,release_date,params,weights,modality,benchmark_notes,price_per_mtok,context_len,chips_optimized_for,source_id,confidence
+deepseek-r1,deepseek,2025-01,MoE (reasoning),open,text,"Catalyst 'R1 moment'; strong reasoning at low training cost",,,"Nvidia (trained)",REF-SANDS-01,B
+deepseek-v4,deepseek,2026,MoE,open,text/multimodal,"Latest flagship; efficiency innovations under constraint",,,"Huawei Ascend + Cambricon",REF-BW-01,C
+qwen3,alibaba,2026,"dense + MoE, open & closed variants",hybrid,multimodal,"Open- and closed-weight family; 180k+ derivative models (Oct-2025)",,,"Nvidia + T-Head",REF-SANDS-01,B
+doubao,bytedance,2025,undisclosed,closed,multimodal,">100m DAU late-2025; priced flagship above predecessor",,,"in-house + Nvidia",REF-BW-01,C
+kimi-k2,moonshot,2025,~1T (per EV token-econ example),open,text,"Kimi K2-class; blended price ref ~$1.29/Mtok (EV illustration)",1.29,,,REF-EV-01,C
+minimax-m,minimax,2026,MoE,open,multimodal,"Priced flagship above predecessor",,,,REF-BW-01,C
+glm-zai,zhipu,2026,undisclosed,hybrid,multimodal,"GLM family / Z.ai",,,,REF-BW-03,C
+ernie,baidu,2026,undisclosed,hybrid,multimodal,"Ernie family",,,"Kunlunxin + Nvidia",REF-BW-01,D
+hunyuan,tencent,2026,undisclosed,hybrid,multimodal,"Hunyuan family",,,,REF-BW-01,D

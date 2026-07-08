@@ -1,0 +1,9 @@
+policy_id,name,level,type,amount_usd_bn,currency_note,date_announced,horizon,target_layers,summary,source_id,confidence
+fyp15,15th Five-Year Plan,national,plan,,,2026-03,2026-2030,all,"Elevated AI to primary national objective; ~90% AI diffusion across economy by 2030 (~70% by 2027); advanced manufacturing + AI infra central priorities",REF-BW-01,C
+dc-network-295,Nationwide AI Data Center Buildout Plan,national,fund,295,~$295bn,2026-06-09,,L6,"Fund a nationwide network of interconnected data centers; >=80% of technology mandated domestic",REF-SANDS-01,C
+ai-robotics-138,AI & Robotics State Fund,national,fund,138,~$138bn over 20yr,2025,2025-2045,L4|L9,"State fund targeting ~$138bn across AI and robotics over 20 years",REF-SANDS-01,C
+robotics-1t,Robotics & High-Tech Investment,national,fund,,~¥1 trillion,2025-03,,L9,"~1 trillion yuan into robotics and high-tech industries",REF-SANDS-01,C
+domestic-equip-50,50% Domestic Equipment Mandate,national,mandate,,,2025-12,,L1|L2,"Foundries instructed to source >=50% of equipment for newly built fabs from domestic suppliers; some advanced lines temporarily exempt",REF-BW-01,C
+euv-2028,Indigenous EUV Program,national,plan,,,,~2028,L1,"Government goal to produce working chips on a domestic EUV prototype by ~2028",REF-BW-01,D
+equity-pivot-0924,Equity Market Policy Pivot / 'Slow Bull',national,plan,,,2024-09-24,,K,"Policy shift treating equity market as strategic; support IPOs of less-sensitive AI champions; 'slow bull' management; buybacks/governance tools",REF-BW-03,C
+big-fund,National IC Industry Investment Fund ('Big Fund'),national,fund,,multi-phase (RMB),,,L1|L2|L3,"State semiconductor investment fund (phases I-III) backing fabs, equipment, memory",REF-BW-01,D

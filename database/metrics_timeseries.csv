@@ -1,28 +1,193 @@
 metric_id,entity,layer,metric_name,unit,period,value,source_id,confidence,notes
-china_compute_total_gw,China,C,Total compute accessible to Chinese AI firms,GW,2026,3.8,REF-BW-01,D,"Incl. capacity housed abroad; wide range"
-china_inference_gw,China,C,Compute available for inference,GW,2026,2.5,REF-BW-01,D,"~60-70% of 3.8GW allocated to inference"
-china_inference_share,China,C,Share of compute to inference,%,2026,65,REF-BW-01,D,"Range 60-70%"
-china_aichips_produced,China,L4,Domestic AI chips produced,units-m,2026,2,REF-SANDS-01,C,"vs demand >5m"
-china_aichips_demand,China,L4,Domestic AI chip demand,units-m,2026,5,REF-SANDS-01,C,">5m units"
-allies_aichips_consumed,US+allies,L4,AI chips consumed,units-m,2026,12,REF-SANDS-01,C,"~12m units/yr"
-smic_advanced_yield_low,smic,L2,Advanced-node yield (low),%,2026,20,REF-BW-01,C,"20-46% range on advanced nodes"
+china_compute_total_gw,China,C,Total compute accessible to Chinese AI firms,GW,2026,3.8,REF-BW-01,D,Incl. capacity housed abroad; wide range
+china_inference_gw,China,C,Compute available for inference,GW,2026,2.5,REF-BW-01,D,~60-70% of 3.8GW allocated to inference
+china_inference_share,China,C,Share of compute to inference,%,2026,65,REF-BW-01,D,Range 60-70%
+china_aichips_produced,China,L4,Domestic AI chips produced,units-m,2026,2,REF-SANDS-01,C,vs demand >5m
+china_aichips_demand,China,L4,Domestic AI chip demand,units-m,2026,5,REF-SANDS-01,C,>5m units
+allies_aichips_consumed,US+allies,L4,AI chips consumed,units-m,2026,12,REF-SANDS-01,C,~12m units/yr
+smic_advanced_yield_low,smic,L2,Advanced-node yield (low),%,2026,20,REF-BW-01,C,20-46% range on advanced nodes
 smic_advanced_yield_high,smic,L2,Advanced-node yield (high),%,2026,46,REF-BW-01,C,
-tsmc_advanced_yield,tsmc,L2,Advanced-node yield,%,2026,80,REF-BW-01,C,">80%"
-china_genai_users,China,L8,Generative AI users,users-m,2026,602,REF-SANDS-01,C,"All served by domestic platforms; (BW cites 515m elsewhere)"
-doubao_dau,bytedance,L8,Doubao daily active users,DAU-m,2025,100,REF-BW-01,C,"Crossed 100m late-2025"
-qwen_dau,alibaba,L8,Qwen daily active users (peak),DAU-m,2026,60,REF-BW-01,D,"50-70m peak"
-yuanbao_dau,tencent,L8,YuanBao daily active users (peak),DAU-m,2026,60,REF-BW-01,D,"50-70m peak"
-chatgpt_dau,openai,L8,ChatGPT daily active users,DAU-m,2026,190,REF-BW-01,C,"Global consumer leader (benchmark)"
-openrouter_china_share,China,L7,Chinese-model share of OpenRouter tokens,%,2026,33,REF-BW-01,C,"~1/3 from Moonshot/DeepSeek/MiniMax/Z.ai/Qwen"
-alibaba_cloud_share,alibaba,L6,Alibaba China AI cloud market share,%,2025,35.8,REF-SANDS-01,B,"Omdia 1H25 via Alibaba filing"
-alibaba_cloud_growth,alibaba,L6,Alibaba Cloud revenue growth YoY,%,2025-Q3,26,REF-SANDS-01,B,"Quarter ended Sep-30-2025"
-china_memory_fabs_2030,China,L3,Planned memory fabs by 2030,count,2030,10,REF-BW-01,D,"As many as 10"
-cxmt_dram_share,cxmt,L3,Global DRAM share,%,2026,5,REF-BW-01,C,"~5%"
-huawei_cluster_processors,huawei,L5,Processors linked in single logical machine,count,2026,8192,REF-BW-01,C,"Optical interconnect plan for 2026"
-china_gdp_growth_target,China,macro,Headline GDP growth target,%,2026,4.5,REF-BW-03,C,"~half of high-growth-era pace"
-china_ai_diffusion_target_2027,China,L8,AI diffusion across economy target,%,2027,70,REF-BW-01,C,"15th FYP interim"
-china_ai_diffusion_target_2030,China,L8,AI diffusion across economy target,%,2030,90,REF-BW-01,C,"15th FYP"
-global_genai_revenue_runrate,Global-ex-China,macro,GenAI economy revenue run-rate,usd-bn,2026,175,REF-EV-01,B,"Deduplicated; global ex-China (benchmark)"
-global_hyperscaler_capex_cum,Global-ex-China,L6,Hyperscaler+neocloud cumulative CapEx,usd-bn,2026,2000,REF-EV-01,B,"$2T through 2026E (benchmark)"
-global_token_volume,Global,L7,Inference tokens processed,quadrillion-per-mo,2026,30,REF-EV-01,C,"Incl. China; growing 14x YoY"
-dc_cost_per_gw_year,Global,L6,Cost to own+operate 1GW AI capacity,usd-bn-per-yr,2026,7.9,REF-EV-01,C,"Unit-economics benchmark"
+tsmc_advanced_yield,tsmc,L2,Advanced-node yield,%,2026,80,REF-BW-01,C,>80%
+china_genai_users,China,L8,Generative AI users,users-m,2026,602,REF-SANDS-01,C,All served by domestic platforms; (BW cites 515m elsewhere)
+doubao_dau,bytedance,L8,Doubao daily active users,DAU-m,2025,100,REF-BW-01,C,Crossed 100m late-2025
+qwen_dau,alibaba,L8,Qwen daily active users (peak),DAU-m,2026,60,REF-BW-01,D,50-70m peak
+yuanbao_dau,tencent,L8,YuanBao daily active users (peak),DAU-m,2026,60,REF-BW-01,D,50-70m peak
+chatgpt_dau,openai,L8,ChatGPT daily active users,DAU-m,2026,190,REF-BW-01,C,Global consumer leader (benchmark)
+openrouter_china_share,China,L7,Chinese-model share of OpenRouter tokens,%,2026,33,REF-BW-01,C,~1/3 from Moonshot/DeepSeek/MiniMax/Z.ai/Qwen
+alibaba_cloud_share,alibaba,L6,Alibaba China AI cloud market share,%,2025,35.8,REF-SANDS-01,B,Omdia 1H25 via Alibaba filing
+alibaba_cloud_growth,alibaba,L6,Alibaba Cloud revenue growth YoY,%,2025-Q3,26,REF-SANDS-01,B,Quarter ended Sep-30-2025
+china_memory_fabs_2030,China,L3,Planned memory fabs by 2030,count,2030,10,REF-BW-01,D,As many as 10
+cxmt_dram_share,cxmt,L3,Global DRAM share,%,2026,5,REF-BW-01,C,~5%
+huawei_cluster_processors,huawei,L5,Processors linked in single logical machine,count,2026,8192,REF-BW-01,C,Optical interconnect plan for 2026
+china_gdp_growth_target,China,macro,Headline GDP growth target,%,2026,4.5,REF-BW-03,C,~half of high-growth-era pace
+china_ai_diffusion_target_2027,China,L8,AI diffusion across economy target,%,2027,70,REF-BW-01,C,15th FYP interim
+china_ai_diffusion_target_2030,China,L8,AI diffusion across economy target,%,2030,90,REF-BW-01,C,15th FYP
+global_genai_revenue_runrate,Global-ex-China,macro,GenAI economy revenue run-rate,usd-bn,2026,175,REF-EV-01,B,Deduplicated; global ex-China (benchmark)
+global_hyperscaler_capex_cum,Global-ex-China,L6,Hyperscaler+neocloud cumulative CapEx,usd-bn,2026,2000,REF-EV-01,B,$2T through 2026E (benchmark)
+global_token_volume,Global,L7,Inference tokens processed,quadrillion-per-mo,2026,30,REF-EV-01,C,Incl. China; growing 14x YoY
+dc_cost_per_gw_year,Global,L6,Cost to own+operate 1GW AI capacity,usd-bn-per-yr,2026,7.9,REF-EV-01,C,Unit-economics benchmark
+china_wfe_vendor_global_share,China (NAURA+AMEC+ACM+Hwatsing+Piotech+Kingsemi),L1,Collective share of global WFE market,%,2025,6.5,WEB-010,C,Up from 5.6% (2024) and 1.2% (2021). Global WFE market sized at $41.4bn (2025).
+china_equip_selfsufficiency,China,L1,Overall semiconductor equipment self-sufficiency,%,2026-01,35,WEB-009,C,Milestone figure per industry tracker.
+china_wfe_etch_selfsuff,China,L1,Etch equipment self-sufficiency,%,2026,55,WEB-009,D,Range 50-60%; midpoint used. AMEC CCP etch qualified in TSMC N5/N7 lines; NAURA ICP etch qualified at SMIC 14nm.
+china_wfe_deposition_selfsuff,China,L1,Deposition equipment self-sufficiency,%,2026,25,WEB-009,D,Range 20-30%; midpoint used. Weakest major WFE sub-segment.
+china_wfe_clean_selfsuff,China,L1,Cleaning equipment self-sufficiency,%,2026,55,WEB-009,D,Range 50-60%; midpoint used.
+china_eda_foreign_share,China,L1,Synopsys+Cadence+Siemens EDA share of China market,%,2024,79,WEB-019,C,Range cited 78-80%; midpoint used.
+empyrean_fullprocess_penetration,empyrean,L1,Full-process EDA tool penetration among domestic fabless,%,2026,35,WEB-011,C,Up from ~13% in 2020 (+22pp).
+smic_advanced_yield_est,smic,L2,Advanced-node yield (independent cross-check),%,2026,35,WEB-014,C,"Range 30-40% cited across multiple analyst estimates; corroborates existing seed row smic_advanced_yield_low/high (20-46%, REF-BW-01)."
+smic_duv_cost_penalty,smic,L2,Cost-per-wafer penalty vs TSMC N3 (DUV multipatterning),x-multiple,2026,2.5,WEB-014,C,Range 2-3x; midpoint used.
+smic_duv_throughput_penalty,smic,L2,Throughput penalty vs EUV-based process,x-multiple,2026,30,WEB-014,C,~34 lithography steps (DUV/SAQP) vs 9 (EUV).
+smic_capex_2026,smic,L2,Annual capital expenditure guidance,$bn,2026,8.1,WEB-013,C,vs $7.5bn in 2025.
+smic_mature_capacity_target,smic,L2,New 28nm+ wafer-start capacity under construction (4 fabs),wpm,2026,340000,WEB-013,C,"Shanghai Lin-Gang, Shenzhen, Beijing, Tianjin fabs; mostly mature-node, not advanced-node."
+asml_duv_revenue_share,asml,L1,Share of ASML 2026 revenue from China-permitted DUV sales,%,2026,20,WEB-012,C,"At risk under proposed MATCH Act (H.R.8170), which would ban all ASML DUV shipments to China."
+tsmc_cowos_capacity_2026,tsmc,L2,CoWoS advanced-packaging capacity,wpm,2026,125000,WEB-015,C,"Expanding from ~80,000 wpm; midpoint of 120-130k range used. Nvidia ~60% of allocation."
+china_packaging_gap_years,China,L2,Advanced-packaging capability gap vs. global frontier,years,2025,3,WEB-015,D,Narrowed from ~5 years (2022) estimate.
+sicarrier_valuation,sicarrier,L1,Company valuation,$bn,2025-09,9,WEB-008,D,"~RMB65bn; single-sourced, unlisted, unaudited."
+sicarrier_revenue_path,sicarrier,L1,Ex-lithography revenue (projected),RMB-bn,2026,7.5,WEB-008,D,Projected path: 4.5 (2025E) → 7.5 (2026E) → 16.9 (2028E).
+cxmt_ipo_valuation_target,cxmt,L3,Post-listing valuation guidance (midpoint of CNY2-3tn range),$bn,2026-Q2,350,WEB-001,D,"Range CNY2-3tn (~$280-420bn); up from ~$42bn Jan-2026 estimate — wide dispersion, treat as indicative pre-listing guidance only."
+cxmt_q1_2026_revenue,cxmt,L3,Quarterly revenue,$bn,2026-Q1,7.1,WEB-001,C,"RMB50.8bn; net profit RMB24.76bn (~$3.5bn), +1688% YoY."
+cxmt_fab_utilization,cxmt,L3,Fab capacity utilization,%,2026-Q1,95.7,WEB-001,C,
+cxmt_dram_yield_g3,cxmt,L3,"DDR5 (G3, ~17.5nm) manufacturing yield",%,2026,80,WEB-002,C,Considered a mature yield figure by industry sources.
+cxmt_dram_share_global,cxmt,L3,Global DRAM market share,%,2026,7.7,WEB-019,C,"UPDATE to existing seed row (cxmt_dram_share, 5%, REF-BW-01) — more recent cross-source figure is 7.7%, #4 globally behind Samsung (40.5%), SK hynix (29.6%), Micron (19.9%)."
+ymtc_nand_share_global,ymtc,L3,Global NAND market share,%,2026,14.5,"WEB-004, WEB-019",C,Range cited 13-16%; midpoint used. World's #3-4 NAND supplier.
+ymtc_ipo_valuation_low,ymtc,L3,IPO/listing valuation (conservative estimate),$bn,2026-05,44,WEB-004,C,RMB300bn (Guosheng Securities); the low end of a very wide (RMB300bn-3tn) estimate range.
+ymtc_phase3_dram_allocation,ymtc,L3,Share of new Phase-3 capacity allocated to DRAM,%,2026,50,WEB-005,C,Balance remains NAND. TSV/hybrid-bonding HBM packaging under development via XMC subsidiary.
+china_memory_capacity_add_2026,China,L3,Incremental memory wafer capacity addition,wafers/month,2026,130000,WEB-006,C,"UBS estimate; range 120-140k wpm, midpoint used. Further growth expected 2027."
+cxmt_hbm3_target_year,cxmt,L3,HBM3 mass-production target (slipping),year,2026,2026,WEB-003,D,"As of Apr-2026, low yields/thermal issues have pushed effective mass production toward 2027; 12-layer (HBM3E-class) now targeted 2027."
+montage_memory_interface_share,montage,L5,Global memory-interface chip market share,%,2025,36.8,WEB-011,C,"UPDATE to existing seed framing (""~1/3 share"") with precise 2025 figure."
+montage_fy2025_revenue,montage,L5,Annual revenue,RMB-bn,2025,5.456,WEB-011,C,"+50% YoY. Net profit RMB2.236bn, +58% YoY. Gross margin 62.2% (interconnect segment 65.6%)."
+montage_new_products_growth,montage,L5,Revenue growth of MRCD/MDB+PCIe Retimer+CKD+CXL MXC family,% YoY,2026-Q1,93.8,WEB-009,B,"RMB269m in Q1-2026, ~19% of interconnect revenue."
+montage_pcie_retimer_shipments,montage,L5,Cumulative PCIe Retimer shipments,units,2026,1000000,WEB-009,B,"""Exceeding one million""; Montage is 1 of 2 scaled global PCIe 5.0 Retimer suppliers."
+montage_hk_ipo_discount,montage,L5,HK IPO price discount to prior A-share close,%,2026-02-05,44,WEB-007,C,"HK priced at HK$106.89 vs A-share close CNY170.90 prior day — a discount, not the ~30% premium referenced in the pod brief; note as a correction."
+montage_hk_debut_pop,montage,L5,HK share price change on trading debut,%,2026-02-09,64,WEB-007,C,Closed at HK$175 on debut day.
+huawei_atlas950_superpod_npus,huawei,L5,Max NPUs per SuperPoD (Atlas 950),count,2026-Q4,8192,WEB-012,C,"Ascend 950DT NPUs; via UnifiedBus/UB-Mesh, all-optical."
+huawei_atlas950_interconnect_bw,huawei,L5,Aggregate interconnect bandwidth (full Atlas 950 SuperPoD),PB/s,2026-Q4,16,WEB-012,C,"Full config: 160 cabinets (128 compute + 32 comms), ~1,000 sqm."
+huawei_ub_mesh_efficiency_claim,huawei,L5,Claimed cluster efficiency at 8k-NPU scale,%,2026,95,WEB-013,D,"Huawei's own claim vs. Nvidia's current 3,584-GPU superpod ceiling; independent verification not found."
+cloudmatrix384_power_ratio,huawei,L5,Power draw vs Nvidia GB200 NVL72 (CloudMatrix 384),x-multiple,2026,4,WEB-014,C,""">4x"" power draw; ~2.5x higher power per PFLOP despite ~60% higher dense FP16 throughput and ~3.5x HBM capacity."
+innolight_q1_2026_revenue,innolight,L5,Quarterly revenue,$bn,2026-Q1,2.7,WEB-015,C,"RMB19.5bn, +192% YoY."
+eoptolink_q1_2026_revenue,eoptolink,L5,Quarterly revenue,$bn,2026-Q1,1.2,WEB-015,C,"RMB8.34bn, +106% YoY."
+china_optical_nvidia_800g_share,China (Innolight+Eoptolink),L5,Share of Nvidia 800G optical module orders,%,2026,60,WEB-015,C,Combined share; Chinese vendors hold 7 of global top-10 optical-transceiver seats.
+memory_bigthree_mktcap_2026,Samsung+SKhynix+Micron,L3,Combined market capitalization,$tn,2026-05-27,4.1,WEB-018,C,Each individually crossed $1tn between 2026-05-06 and 2026-05-27.
+global_hbm_share_skhynix,SK hynix,L3,Global HBM market share,%,2026-Q2,62,WEB-019,C,Figures vary by quarter/source (range 50-62% cited); most recent quarter's figure used.
+global_hbm_share_micron,Micron,L3,Global HBM market share,%,2026-Q2,21,WEB-019,C,
+global_hbm_share_samsung,Samsung,L3,Global HBM market share,%,2026-Q2,17,WEB-019,C,
+china_nvidia_dc_share,China,L4,Nvidia data-center accelerator share in China,%,2023 (pre-controls),95,WEB-038,C,Baseline pre-Entity-List-escalation share
+china_nvidia_dc_share,China,L4,Nvidia data-center accelerator share in China,%,2025-H2,<60,WEB-038,C,Domestic chipmakers reported delivering 1.65m AI GPUs domestically in same period
+china_nvidia_dc_share,China,L4,Nvidia data-center accelerator share in China,%,2026,~0 (per CEO commentary),WEB-039,B,"Jensen Huang public statement; conflicts with reported parallel $14bn ByteDance 2026 Nvidia order (WEB-035) — treat as contested, not reconciled"
+cambricon_mkt_cap,Cambricon,L4,Market capitalization,$bn,2026-06-30 (peak),"~145 (RMB ~1,000bn)",WEB-040,C,First STAR-listed co. to cross RMB1tn; corrected ~14% within 2 trading days
+cambricon_mkt_cap,Cambricon,L4,Market capitalization,$bn,2026-07-06,~120 (RMB ~850bn),WEB-041,B,Exchange-derived market data
+cambricon_revenue,Cambricon,L4,Annual revenue,$bn,FY2025,~0.90 (RMB 6.5bn),"WEB-005,WEB-006",C,Net profit ~RMB2.06bn same period
+moore_threads_mkt_cap,Moore Threads,L4,Market capitalization,$bn,2026-07-08,~44 (RMB 314.45bn),WEB-042,B,Exchange-derived market data
+moore_threads_ipo_raise,Moore Threads,L4,IPO proceeds,$bn,2025-12-05,~1.1 (RMB 8bn),WEB-007,B,STAR Market; approved 88 days after application
+metax_revenue,MetaX,L4,Annual revenue,$bn,FY2025,0.23 (RMB 1.6bn),WEB-010,C,"+121% YoY; sold 33,600 C-series units (+147% YoY)"
+metax_ipo_mktcap,MetaX,L4,"Implied market cap, Day-1 close",$bn,2025-12-17,~42.6,WEB-009,C,Day-1 close +693% vs. offer price
+biren_ipo_mktcap,Biren,L4,"Implied market cap, Day-1 close",$bn,2026-01-02,~10.6 (HK$82.6bn),WEB-012,C,"Institutional bids ~26x oversubscribed; retail ~2,348x"
+iluvatar_ipo_raise,Iluvatar CoreX,L4,IPO proceeds,$bn,2026-01-08,~0.4725 (HK$3.68bn),"WEB-013,WEB-014",B,Follow-on raise ~$850m sought as of 2026-07-08 after +428% rally
+kunlunxin_ipo_target_valuation,Kunlunxin,L4,Targeted IPO valuation (HK),$bn,2026-06-29 (reported),~50,WEB-018,C,Up from earlier ~$14.7bn (HK$100bn) target reported 2026-05-08 (WEB-017)
+china_advanced_node_capacity,China,L2/L4-adjacent,7nm/5nm-class wafer capacity,wafers/month (000s),2025 (current),~20-50,WEB-024,D,Range reflects source disagreement; SMIC alone approaching ~50k wpm advanced-node in 2025 per some reporting
+china_advanced_node_capacity_target,China,L2/L4-adjacent,7nm/5nm-class wafer capacity target,wafers/month (000s),end-2027 (target),~150-160,"WEB-023,WEB-024",C,"""5x in two years"" goal, SMIC + Hua Hong jointly"
+china_advanced_node_capacity_target,China,L2/L4-adjacent,7nm/5nm-class wafer capacity target,wafers/month (000s),2030 (target),~500,WEB-023,D,Longer-horizon extrapolation
+china_ai_dc_mandate_size,China,macro/L4,National AI-computing-grid draft plan size,$bn,2026 (drafted),~295 (up to ~740 incl. power),"WEB-020,WEB-022",C,Targets 80% domestic-chip content by 2028
+ascend_910c_vs_h100_inference,Huawei/Nvidia,L4,Ascend 910C inference throughput vs. H100,% of H100,2025-2026,~60,WEB-029,C,"Per DeepSeek internal benchmarking, as reported"
+cloudmatrix384_bf16_pflops,Huawei,L4,CloudMatrix 384 supernode compute,PFLOPS (BF16),2025-2026,~300,WEB-001,C,vs. Nvidia GB200 NVL72 ~180 PFLOPS
+alibaba_cloud_share_2026,alibaba,L6,Alibaba China AI cloud market share,%,2026,38.1,WEB-401,C,Up from 35.8% (H1-2025 seed row)
+alibaba_cloud_growth_2026,alibaba,L6,Alibaba Cloud revenue growth YoY,%,2026-Q1,38,WEB-402,B,FY26-Q4-equiv quarter; AI subset triple-digit growth 11 consecutive quarters
+volcengine_ai_cloud_share,bytedance,L6,Volcengine China AI cloud market share,%,2025-H1,14.8,WEB-401,C,#2 by Omdia AI-cloud cut
+volcengine_maas_revenue_2025,bytedance,L6,Volcengine MaaS revenue,rmb-bn,2025,1.5,WEB-426,C,Base year before 10x 2026 target
+volcengine_maas_target_2026,bytedance,L6,Volcengine MaaS revenue target,rmb-bn,2026,15,WEB-426,C,10x 2025; raised on Seedance 2.0 growth
+bytedance_capex_2026,bytedance,L6,ByteDance AI data-center capex,rmb-bn,2026,200,WEB-427,D,"""Raised to over RMB200bn,"" ~60% of 2025 profit"
+huawei_cloud_share_overall,huawei,L6,Huawei Cloud overall China cloud-infra market share,%,2025-Q4,17,WEB-403,C,"Distinct from AI-cloud-specific share (13.1%, H1-25)"
+huawei_cloud_ext_revenue_2025,huawei,L6,Huawei Cloud external-customer revenue,rmb-bn,2025,32.16,WEB-403,C,-3.5% YoY
+huawei_ai_chip_revenue_2026e,huawei,L4,Huawei AI-chip (Ascend) revenue estimate,usd-bn,2026,12,WEB-404 (Tom's Hardware),C,+60% YoY vs ~$7.5bn 2025; based on orders from Alibaba/ByteDance/Tencent
+baidu_ai_cloud_growth_q1_2026,baidu,L6,Baidu AI-cloud infrastructure revenue growth YoY,%,2026-Q1,79,WEB-428,B,GPU-computing subscription revenue +184% same quarter
+baidu_ai_revenue_share,baidu,macro,AI share of Baidu total business revenue,%,2026-Q1,50,WEB-429,C,"""Majority"" per co. statements; approximate"
+china_dc_grid_investment,China,L6,National AI data-center grid investment plan,usd-bn,2026,295,WEB-411,C,"NDRC draft, ~RMB2tn/5-yr, 80% domestic-content mandate, ~2028 grid target"
+openrouter_china_share_2026,China,L7,Chinese-model share of OpenRouter tokens,%,2026-05,61,WEB-419,C,UPDATE from seed's 33% (2026 baseline) — up from <2% mid-2025
+openrouter_us_share_2026,US,L7,US-lab (OpenAI+Anthropic+Google) share of OpenRouter tokens,%,2026-06,30,WEB-425,C,Down from ~70% (Jun-2025)
+deepseek_openrouter_share,deepseek,L7,DeepSeek standalone share of OpenRouter tokens,%,2026,17,WEB-424,C,Reported range 16-17.6%; largest single provider on platform
+doubao_dau_peak_2026,bytedance,L8,Doubao daily active users (Spring Festival peak),DAU-m,2026,145,WEB-421,C,UPDATE from seed's 100m (late-2025)
+qwen_dau_peak_2026,alibaba,L8,Qwen daily active users (Spring Festival peak),DAU-m,2026,73.5,WEB-421,C,UPDATE from seed's 60m; +940% YoY
+yuanbao_dau_peak_2026,tencent,L8,YuanBao daily active users (Spring Festival peak),DAU-m,2026,40.5,WEB-421,C,UPDATE from seed's 60m (prior figure likely overstated/stale)
+doubao_mau_q1_2026,bytedance,L8,Doubao monthly active users,MAU-m,2026-Q1,260,WEB-421,C,+300% YoY; overtook Baidu app for first time
+yuanbao_mau_q1_2026,tencent,L8,YuanBao monthly active users,MAU-m,2026-Q1,150,WEB-421,C,
+china_ai_apps_combined_mau,China,L8,"Combined MAU, top-5 Chinese AI chat/search apps",MAU-m,2026-Q1,900,WEB-422,D,Doubao 260m + Ernie Bot 220m + Quark 180m + YuanBao 150m + Kimi 90m
+zhipu_mkt_cap_2026,zhipu,L7,Zhipu (Z.ai) market capitalization,usd-bn,2026-07,87,"WEB-445, WEB-446",C,Highly volatile; peaked >HK$1tn (~$130bn) Jun-2026
+minimax_mkt_cap_2026,minimax,L7,MiniMax market capitalization,usd-bn,2026-07,14,"WEB-447, WEB-448",C,"Down from ~$53bn peak (Mar-2026, HK$410bn) on lock-up unlock"
+deepseek_valuation_2026,deepseek,L7,"DeepSeek implied valuation, first external round",usd-bn,2026,55,"WEB-430, WEB-431",C,Range reported $52-59bn; RMB50bn/$7.4bn raised
+china_coding_copilot_share,China,L8,GitHub Copilot share of China coding-assistant market,%,2026,64.5,WEB-423,C,Vs. Tongyi Lingma (Alibaba) 12.9% — foreign tool still leads domestically
+china_tongyi_lingma_share,alibaba,L8,Tongyi Lingma share of China coding-assistant market,%,2026,12.9,WEB-423,C,Leading domestic alternative to Copilot
+enterprise_coding_agent_market,Global,L8,Enterprise AI coding-agent market run-rate,usd-bn,2026-04,10,WEB-423,D,"Range $9.8-11.0bn annualized; global, not China-specific (benchmark)"
+china_electricity_generation_total,China,L0,Total electricity generation,TWh,2024,10000,WEB-001,C,">10,000 TWh; more than US+EU+India combined. Approximate figure (""over 10,000"")."
+us_electricity_generation_total,US,L0,Total electricity generation,TWh,2024,4600,WEB-001,C,~4.6 petawatt-hours. China generates >2x US.
+china_electricity_generation_added_2025,China,L0,Incremental electricity generation added,TWh,2025,500,WEB-001,C,Almost all incremental generation from solar and wind.
+china_dc_capacity_installed,China,L0,Installed data-center capacity,GW,2025,32,WEB-002,C,Projected to reach 40GW by end-2026; 19% CAGR through 2030 to ~60GW by 2030.
+china_dc_capacity_2026e,China,L0,Installed data-center capacity (forecast),GW,2026,40,WEB-002,C,"AI/HPC facilities = 39% of installed capacity in 2026, rising to 48% by 2030."
+china_dc_capacity_2030e,China,L0,Installed data-center capacity (forecast),GW,2030,60,WEB-002,C,Rystad Energy forecast.
+china_dc_power_demand_2030e,China,L0,Data-center power demand (forecast),TWh,2030,479,WEB-002,D,"Wood Mackenzie estimate, ~17%/yr growth. Alternative IEA estimate: +175 TWh (+170%) vs 2024 by 2030."
+us_dc_power_demand_2025,US,L0,Data-center power demand,GW,2025,31,WEB-021,C,Baseline for US AI/DC power-demand growth trajectory.
+us_dc_power_demand_2026e,US,L0,Data-center power demand (forecast),GW,2026,41,WEB-021,C,
+us_dc_power_demand_2027e,US,L0,Data-center power demand (forecast),GW,2027,66,WEB-021,C,
+us_dc_power_demand_2028e,US,L0,Data-center power demand (forecast),GW,2028,74,WEB-021,D,Morgan Stanley forecast.
+us_grid_shortfall_2028e,US,L0,Forecast power-delivery shortfall vs demand,GW,2028,49,WEB-021,D,Morgan Stanley / PJM-governor analysis; alternative estimates 44-50GW range across sources.
+china_solar_curtailment_rate,China,L0,Solar power curtailment rate,%,2026-02,9.2,WEB-004,C,Up from 6.1% same period 2025. National curtailment ceiling 10% (relaxed from 5% in 2024).
+china_wind_curtailment_rate,China,L0,Wind power curtailment rate,%,2026-02,8.5,WEB-004,C,Up from 6.2% same period 2025.
+china_edwc_hub_occupancy,China,L0,East-Data-West-Compute hub-node occupancy rate,%,2026,63,WEB-003,C,"Inter-hub latency reduced to 20ms; cluster compute at Qingyang/Zhongwei hubs >50,000 petaflops."
+china_edwc_investment,China,L0,East-Data-West-Compute cumulative investment,$bn,2026,33,WEB-003,C,"CNY239bn documented investment, >half of planned scope."
+state_grid_15fyp_capex,state-grid,L0,15th FYP grid capital-expenditure commitment,$bn,2026-2030,580,WEB-005,C,CNY4tn; +40% vs prior (14th) FYP.
+china_uhv_new_lines_2030,China,L0,New UHV transmission lines planned,units,2026-2030,15,WEB-005,C,Will add ~200GWh/yr renewable-connection capacity; +30-35% cross-provincial transmission capacity vs 2025 levels.
+catl_ess_revenue_2025,catl,L0,Energy-storage-system (ESS) revenue,$bn,2025,8.6,WEB-006,C,RMB62.4bn; 14.7% of total CATL revenue.
+catl_ess_shipped_2025,catl,L0,Energy-storage batteries shipped,GWh,2025,121,WEB-006,C,+29% YoY; #1 globally for 5th consecutive year.
+catl_ess_share_target_2030,catl,L0,ESS as share of global sales (target),%,2030,50,WEB-006,D,Management guidance; up from ~25% currently.
+china_wind_solar_capacity_total,China,L0,Total installed wind+solar capacity,GW,2025,1840,WEB-024,C,"1,200GW solar + 640GW wind; 47.3% of total installed power capacity, surpassing thermal for first time."
+china_wind_solar_capacity_added_2025,China,L0,Wind+solar capacity added,GW,2025,430,WEB-024,C,"311GW solar + 119GW wind; +22% YoY, record high."
+china_renewable_generation_h1_2025,China,L0,Renewable generation (surpassed coal),TWh,2025-H1,5072,WEB-024,C,"vs coal generation 4,896 TWh same period — first time renewables > coal generation in China's history."
+china_coal_generation_share,China,L0,Coal share of electricity generation,%,2025,55,WEB-020,C,Down from ~59% in 2024; H1-2025 fell to 56% from 59%.
+china_hydro_generation_share,China,L0,Hydro share of electricity generation,%,2025,14,WEB-020,C,
+china_solar_generation_share,China,L0,Solar share of electricity generation,%,2025,12,WEB-020,C,
+china_wind_generation_share,China,L0,Wind share of electricity generation,%,2025,10,WEB-020,C,
+china_nuclear_generation_share,China,L0,Nuclear share of electricity generation,%,2025,4.5,WEB-020,C,
+china_nuclear_operating_capacity,China,L0,Operating nuclear capacity,GW,2026,63,WEB-019,C,60 reactors operating; combined operating+under-construction+approved capacity approaching 125GW by early 2026.
+china_nuclear_under_construction,China,L0,Nuclear reactor units under construction,units,2026,36,WEB-019,C,~35GWe total capacity under construction; half of global under-construction nuclear capacity is in China.
+china_nuclear_target_2030,China,L0,Nuclear capacity target,GW,2030,110,WEB-019,C,Per 15th FYP (approved Mar-2026). Longer-term target 200GW by 2035 (from ~57GW baseline).
+unitree_revenue_2025,unitree,L9,Annual revenue,RMB-bn,2025,1.69,WEB-008,C,+335% YoY.
+unitree_ipo_valuation_target,unitree,L9,IPO target valuation,$bn,2026,6.0,WEB-008,C,Range cited $5.9-6.2bn (~RMB40-42bn); midpoint used.
+ubtech_revenue_2026e,ubtech,L9,Revenue forecast,RMB-bn,2026,3.69,WEB-009,C,Raised from prior forecast of RMB2.92bn; +89% YoY implied.
+ubtech_u1_orders,ubtech,L9,Cumulative U1-series humanoid orders,units,2026,13361,WEB-009,C,At product launch event.
+horizon_revenue_2025,horizon-robotics,L9,Annual revenue,RMB-bn,2025,3.758,WEB-010,C,+57.7% YoY; automotive solutions 94.6% of total.
+horizon_net_loss_2025,horizon-robotics,L9,Annual net loss,RMB-bn,2025,10.469,WEB-010,C,R&D spend RMB5.154bn = 137.1% of revenue.
+agibot_valuation,agibot,L9,Company valuation,$bn,2026-07,6.4,WEB-011,C,Also cited as HK$40-50bn (~$5.1-6.4bn) target for planned HK IPO.
+galbot_valuation,galbot,L9,Company valuation,$bn,2025-12,3.0,WEB-012,C,After $300m+ round; $800m cumulative funding raised.
+fourier_valuation,fourier-intelligence,L9,Pre-money valuation,$bn,2025-05,1.1,WEB-012,D,RMB8bn; SoftBank Vision Fund-backed.
+china_humanoid_funding_2025,China (humanoid robotics sector),L9,Total humanoid-robotics funding raised,$bn,2025,3.7,WEB-012,C,Across 26 deals; +169% YoY vs 2024.
+apollo_go_cumulative_rides,baidu-apollo-go,L9,Cumulative robotaxi rides (worldwide),units-m,2026-04,22,WEB-013,C,"Peak weekly rides >350,000 (Mar-2026). Live in 27 cities plus South Korea; UK/Switzerland pilots pending."
+ponyai_revenue_q1_2026,ponyai,L9,Quarterly revenue,$m,2026-Q1,34.3,WEB-014,C,"+145% YoY, beat $21.7m consensus."
+ponyai_fleet_target_2026,ponyai,L9,Robotaxi fleet target (year-end),units,2026,3500,WEB-014,C,"Raised from prior 3,000 target."
+weride_mktcap,weride,L9,Market capitalization,$bn,2026-07,2.44,WEB-015,C,"Share price $7.14, down from $16.55 IPO price (Oct-2024), -56.9% since IPO."
+weride_revenue_q1_2026,weride,L9,Quarterly revenue,$m,2026-Q1,16.5,WEB-015,C,RMB114m; +58% YoY.
+weride_fleet_size,weride,L9,Global robotaxi fleet size,units,2026-04,1300,WEB-015,C,"Targeting 2,600 by year-end 2026."
+momenta_ipo_valuation,momenta,L9,IPO valuation,$bn,2026-07,9.0,WEB-016,B,HK$295.60/share; total mkt value ~HK$70.9bn at debut.
+momenta_noa_share,momenta,L9,Global independent-supplier urban-NOA market share,%,2026-02 (TTM),64.5,WEB-016,C,"12 months to Feb-2026; software in >733,000 vehicles."
+china_industrial_robots_installed_2024,China,L9,Industrial robots installed,units-k,2024,295,prior-context,C,"54% of global total; operating stock >2m units; robot density 470/10,000 workers (above Germany, Japan). Carried forward from framework-level research context; re-verify with primary IFR source before DB merge."
+figure_ai_valuation,figure-ai (global peer),L9,Company valuation (US benchmark),$bn,2026,39,WEB-022,C,"OpenAI-backed round; ~15x jump from ~$2.6bn early-2024. Non-China entity, benchmark only."
+tesla_optimus_production_target_2026,tesla (global peer),L9,Optimus production target range,units-k,2026,500,WEB-022,D,"Range cited 50k-1m units; midpoint-order-of-magnitude used. Non-China entity, benchmark only."
+china_ai_diffusion_2027_fyp15,China,macro,15th FYP AI economic penetration target,%,2027,70,WEB-601,C,Confirms/aligns with existing china_ai_diffusion_target_2027 row
+china_ai_diffusion_2030_fyp15,China,macro,15th FYP AI economic penetration target,%,2030,90,WEB-601,C,Confirms/aligns with existing china_ai_diffusion_target_2030 row
+china_core_ai_industry_size,China,macro,Core AI industry size,usd-bn-equiv,2025,168,WEB-601,D,~RMB1.2tn (2025); FX approx; target >RMB10tn by 2030
+dc_grid_295_domestic_share,China,L6,Domestic-technology mandate for national DC grid,%,2026,80,WEB-605,B,NDRC-led plan; grid completion targeted 2028
+big_fund_phase1_rmb,China,L1|L2|L3,Big Fund Phase I registered capital,rmb-bn,2014,138.7,WEB-603,C,
+big_fund_phase2_rmb,China,L1|L2|L3,Big Fund Phase II registered capital,rmb-bn,2019,204,WEB-603,C,
+big_fund_phase3_rmb,China,L1|L2|L3,Big Fund Phase III registered capital,rmb-bn,2024,344,WEB-604,C,~$47.5bn at 2024 FX; established 2024-05-24
+hbm_control_threshold,US-BIS,L3,HBM export-control bandwidth-density threshold,gb-per-mm2,2024,2,WEB-615,B,"All HBM above this density restricted country-wide to China, effective Dec-2024"
+h200_tariff_rate,US-BIS,L4,Tariff on approved H200/MI325X exports to China,%,2026,25,WEB-624,B,"Case-by-case license review from presumption-of-denial, effective 2026-01-15/16"
+rare_earth_suspension_window,China,macro,Rare-earth/gallium/germanium/antimony export-control suspension (vs US),months,2025-2026,12,WEB-622,C,"Suspension 2025-11-07 to ~2026-11-10/27; reversible, not a repeal"
+equity_pivot_date,China,K,Equity-market policy pivot date ('slow bull'),date-flag,2024-09-24,1,WEB-620,C,PBOC/CSRC/NFRA stimulus + governance package
+hstech_fwd_pe,HSTECH-index,K,Hong Kong Tech Index forward P/E (China AI-basket proxy),x,2026-Q2,19.9,WEB-660,C,5-yr average ~22.5x; basket proxy incl. AI/tech-adjacent names
+ah_premium_montage,montage,K,H-share premium (or discount) vs A-share,%,2026-04,14,WEB-654,C,POSITIVE = H-premium (reversal of typical A>H pattern); at IPO (2026-02) H priced at 41% discount to A
+openrouter_china_share_update,China,L7,Chinese-model share of OpenRouter tokens (updated),%,2026-Q1-Q2,55,WEB-663,C,"Range 51-61% Feb-Apr 2026; supersedes/updates existing openrouter_china_share row (33%, dated 2026, source REF-BW-01) -- flag for reconciliation, up from <2% in late 2024"
+china_ai_overseas_presence,China,W,Chinese AI firms with commercial presence abroad,countries,2026-Q1,170,WEB-664,D,Per Digital Silk Road / BRI-adjacent reporting; single-source estimate
+zhipu_mktcap,zhipu,L7,Market capitalization,hkd-bn,2026-06,585.8,WEB-649,B,~$75bn; up from HK$57.9bn day-1 (2026-01-08)
+minimax_mktcap,minimax,L7,Market capitalization,hkd-bn,2026-06,159.3,WEB-649,B,~$20bn; up from HK$106.7bn day-1 (2026-01-09)
+biren_mktcap_offer,biren,L4,Market capitalization at IPO offer price,hkd-bn,2026-01,46.9,WEB-641,B,
+iluvatar_mktcap,iluvatar,L4,Market capitalization,usd-bn,2026-06,25.6,WEB-642,C,+428% since 2026-01-08 IPO
+moore_threads_mktcap,moore-threads,L4,Market capitalization post-issue,rmb-bn,2025-12,54,WEB-643,B,
+kunlunxin_target_valuation,kunlunxin,L4,Target IPO valuation,usd-bn,2026-06,50,WEB-651,D,Escalated from $14.7bn ask in May-2026; not yet listed
+cxmt_ipo_target_raise,cxmt,L3,Targeted STAR Market IPO raise,usd-bn,2026,4.3,WEB-655,C,RMB29.5bn; review cleared ~2026-05-27

@@ -1,10 +1,22 @@
 model_id,developer,release_date,params,weights,modality,benchmark_notes,price_per_mtok,context_len,chips_optimized_for,source_id,confidence
-deepseek-r1,deepseek,2025-01,MoE (reasoning),open,text,"Catalyst 'R1 moment'; strong reasoning at low training cost",,,"Nvidia (trained)",REF-SANDS-01,B
-deepseek-v4,deepseek,2026,MoE,open,text/multimodal,"Latest flagship; efficiency innovations under constraint",,,"Huawei Ascend + Cambricon",REF-BW-01,C
-qwen3,alibaba,2026,"dense + MoE, open & closed variants",hybrid,multimodal,"Open- and closed-weight family; 180k+ derivative models (Oct-2025)",,,"Nvidia + T-Head",REF-SANDS-01,B
-doubao,bytedance,2025,undisclosed,closed,multimodal,">100m DAU late-2025; priced flagship above predecessor",,,"in-house + Nvidia",REF-BW-01,C
-kimi-k2,moonshot,2025,~1T (per EV token-econ example),open,text,"Kimi K2-class; blended price ref ~$1.29/Mtok (EV illustration)",1.29,,,REF-EV-01,C
-minimax-m,minimax,2026,MoE,open,multimodal,"Priced flagship above predecessor",,,,REF-BW-01,C
-glm-zai,zhipu,2026,undisclosed,hybrid,multimodal,"GLM family / Z.ai",,,,REF-BW-03,C
-ernie,baidu,2026,undisclosed,hybrid,multimodal,"Ernie family",,,"Kunlunxin + Nvidia",REF-BW-01,D
-hunyuan,tencent,2026,undisclosed,hybrid,multimodal,"Hunyuan family",,,,REF-BW-01,D
+deepseek-r1,deepseek,2025-01,MoE (reasoning),open,text,Catalyst 'R1 moment'; strong reasoning at low training cost,,,Nvidia (trained),REF-SANDS-01,B
+deepseek-v4,deepseek,2026,MoE,open,text/multimodal,Latest flagship; efficiency innovations under constraint,,,Huawei Ascend + Cambricon,REF-BW-01,C
+qwen3,alibaba,2026,"dense + MoE, open & closed variants",hybrid,multimodal,Open- and closed-weight family; 180k+ derivative models (Oct-2025),,,Nvidia + T-Head,REF-SANDS-01,B
+doubao,bytedance,2025,undisclosed,closed,multimodal,>100m DAU late-2025; priced flagship above predecessor,,,in-house + Nvidia,REF-BW-01,C
+kimi-k2,moonshot,2025,~1T (per EV token-econ example),open,text,Kimi K2-class; blended price ref ~$1.29/Mtok (EV illustration),1.29,,,REF-EV-01,C
+minimax-m,minimax,2026,MoE,open,multimodal,Priced flagship above predecessor,,,,REF-BW-01,C
+glm-zai,zhipu,2026,undisclosed,hybrid,multimodal,GLM family / Z.ai,,,,REF-BW-03,C
+ernie,baidu,2026,undisclosed,hybrid,multimodal,Ernie family,,,Kunlunxin + Nvidia,REF-BW-01,D
+hunyuan,tencent,2026,undisclosed,hybrid,multimodal,Hunyuan family,,,,REF-BW-01,D
+openpangu-2.0,huawei,2026-06-12,unspecified,unspecified,text/multimodal (unconfirmed),"Reported first frontier-scale model trained entirely on Ascend NPUs with zero Nvidia hardware involvement (vendor-adjacent reporting, not independently verified)",,unspecified,Ascend (CANN/MindSpore),WEB-027,D
+glm-5,zhipu (z.ai),2026 (reported),unspecified,unspecified,text/multimodal (unconfirmed),"Reported every parameter trained on Huawei Ascend using MindSpore framework, zero Nvidia dependency",,unspecified,Ascend (MindSpore),WEB-027,D
+deepseek-v4-pro,deepseek,2026-04-24,"1.6T MoE, ~49B active",open,text/multimodal,"SWE-bench Verified 80.6% (vs Claude Opus 4.7 80.8%, GPT-5.5 74.9%); first frontier-class model trained+served off Nvidia","~0.87 (output, est.)",1M,"Huawei Ascend 950 + Cambricon (Day-0 adaptation); also Hygon, Moore Threads","WEB-413, WEB-414",C
+qwen3.7-max,alibaba,2026,"~1T total, ~24B active",closed (API); Qwen3 open series Apache-2.0,multimodal,Flagship DashScope API model; 145+ official model IDs; Qwen3 open series remains most-downloaded family on Hugging Face,"2.50 (input, flagship tier); Qwen3-Max: 0.78 in / 3.90 out",1M,Nvidia + T-Head,"WEB-420, WEB-421b",C
+glm-5.2,zhipu,2026-06-16,undisclosed MoE,open (MIT license),multimodal,"#4 globally on Artificial Analysis Intelligence Index (behind Claude ""Fable"" 5, Opus 4.8, GPT-5.5); within ~1pt of Opus 4.8 on agentic coding at ~1/5 the cost",low (implied ~1/5 of Opus 4.8),undisclosed,undisclosed,"WEB-423, WEB-424",C
+hunyuan-hy3,tencent,2026-07-06,"295B MoE, 21B active, 3.8B MTP",open (Apache 2.0),multimodal,"SWE-Bench Verified 78.0, SWE-Bench Pro 57.9, BrowseComp 84.2 (matches GPT-5.5), GPQA Diamond 90.4 (vs GPT-5.5 93.6), CL-bench 23.8 (#1 among Chinese models, #2 overall behind Claude Opus 4.8's 24.8)",free 2-wk OpenRouter promo at launch,256K,undisclosed,"WEB-417, WEB-418",C
+ernie-5.0,baidu,2026-01-22,"2.4T, native full-modality",closed (weights not released),multimodal,"LMArena text leaderboard 1460, global top-10",undisclosed,undisclosed,Kunlunxin + Nvidia,WEB-434,C
+ernie-5.1,baidu,2026-05-08,~1/3 total params & 1/2 active params of Ernie 5.0 (MoE),closed (weights not released),multimodal,"#4 globally on LMArena Search Arena (1223), behind 2 Claude Opus variants + GPT-5.5 Search; trained at ~6% compute cost of comparable frontier models",undisclosed,undisclosed,Kunlunxin + Nvidia,WEB-434,C
+kimi-k2.6,moonshot,2026,trillion-param MoE class,open,multimodal,"Long-horizon coding, coding-driven UI/UX generation, multi-agent orchestration",0.66 in / 3.41 out,undisclosed,undisclosed,WEB-415,C
+kimi-k2.7-code,moonshot,2026-06,trillion-param MoE class,open,text (coding),Near-frontier terminal/coding scores; undercuts frontier pricing by ~10x,low (order of magnitude below frontier),undisclosed,undisclosed,WEB-433,D
+kimi-k2-thinking,moonshot,2025-2026,"1T MoE, 32B active",open,text,"Agentic, long-horizon reasoning",undisclosed,256K,undisclosed,WEB-415,C
+doubao (update),bytedance,2025-2026,undisclosed,closed,multimodal,"DAU peak 145m (Spring Festival 2026, up from >100m late-2025); MAU 260m+ Q1-2026 (+300% YoY)",undisclosed,undisclosed,in-house + Nvidia,WEB-421,C

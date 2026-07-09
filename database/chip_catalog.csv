@@ -1,8 +1,27 @@
 chip_id,vendor,type,node_nm,fab,flops_notes,memory,interconnect,release_status,global_analog,source_id,confidence
-ascend-950pr,huawei,NPU,<7,smic,"Next-gen Ascend; targeted for scaled <7nm",HBM (indigenous path),"Huawei optical scale-up (8192 processors, 2026)",announced,"H100/H200-class (target)",REF-BW-01,C
-ascend-910x,huawei,NPU,7,smic,"910-series training/inference",HBM,"CloudMatrix scale-up",shipping,"A100/H100-class",REF-BW-01,D
-cambricon-mlu,cambricon,NPU,7,smic/tsmc-legacy,"Siyuan MLU training/inference",HBM/GDDR,,shipping,"A100-class",REF-BW-03,D
-thead-zhenwu,alibaba,ASIC,,,"T-Head Zhenwu; powering 10k-chip DC scaling to 100k",,,"deploying/designing",Nvidia-class,REF-BW-01,C
-kunlun-p,kunlunxin,ASIC,,,"Kunlun P-series",,,shipping,Nvidia-class,REF-BW-01,D
-mtt-gpu,moore-threads,GPU,,,"MTT full-featured GPGPU",GDDR,,shipping,Nvidia-class,REF-SANDS-01,D
-biren-br,biren,GPU,,,"BR-series training GPU",HBM,,sampling,Nvidia-class,REF-SANDS-01,D
+ascend-950pr,huawei,NPU,<7,smic,Next-gen; monolithic compute die; targeted 1Q26 shipment,HiBL 1.0 (self-developed HBM),Huawei optical scale-up,shipping (1Q26 per roadmap),H100/H200-class (target),"WEB-002,WEB-004",C
+ascend-910x,huawei,NPU,7,smic,910-series training/inference,HBM,CloudMatrix scale-up,shipping,A100/H100-class,REF-BW-01,D
+cambricon-mlu,cambricon,NPU,7,smic/tsmc-legacy,Siyuan MLU training/inference,HBM/GDDR,,shipping,A100-class,REF-BW-03,D
+thead-zhenwu,alibaba,ASIC,unspecified,"unspecified (TSMC historically, access uncertain)",Powering scale-up from 10k-chip to 100k-chip DC deployments (as previously catalogued),unspecified,unspecified,deploying/designing,Nvidia-class,REF-BW-01 (seed),C
+kunlun-p,kunlunxin,ASIC,,,Kunlun P-series,,,shipping,Nvidia-class,REF-BW-01,D
+mtt-gpu,moore-threads,GPU,,,MTT full-featured GPGPU,GDDR,,shipping,Nvidia-class,REF-SANDS-01,D
+biren-br,biren,GPU,,,BR-series training GPU,HBM,,sampling,Nvidia-class,REF-SANDS-01,D
+montage-mrcd-mdb-gen2,montage,memory-interface (RCD/data-buffer),,fabless (TSMC/foundry-agnostic),n.a. (not a compute chip),"Enables DDR5 MRDIMM at 12,800 MT/s (+45% vs Gen1 8,800 MT/s)",,shipping (volume ramp),Rambus RCD/DB equivalents,WEB-009,B
+montage-m88rt61632,montage,PCIe/CXL retimer,,fabless,64 GT/s (PCIe 6.x/CXL 3.x); 43dB link budget; proprietary PAM4 SerDes,,PCIe 6.x / CXL 3.x,sampling,Astera Labs Aries 6,WEB-010,B
+cxmt-ddr5-g3,cxmt,DRAM,~17.5 (G3 process),cxmt (in-house),DDR5-8000; 16Gb/24Gb die capacities; ~80% yield,n.a. (this is the memory itself),,shipping,Samsung/SK hynix/Micron DDR5 mainstream,WEB-002,C
+cxmt-lpddr5x-g3,cxmt,DRAM (mobile),~17.5 (G3 process),cxmt (in-house),LPDDR5X-10667; 12/16/24GB packages,,,shipping,Samsung/SK hynix/Micron LPDDR5X,WEB-002,C
+cxmt-hbm2e,cxmt,HBM,,cxmt (in-house),Bridge product ahead of HBM3; targets domestic GPUs already using HBM2E-class memory,HBM2E,,mass production targeted 2026,SK hynix/Samsung HBM2E (2020-21 vintage),WEB-003,D
+cxmt-hbm3,cxmt,HBM,,cxmt (in-house),"Low yields, thermal/heat-dissipation issues reported Apr-2026; 12-layer (HBM3E-class) targeted 2027",HBM3,,sampling/slipping (2026),SK hynix/Samsung/Micron HBM3E (shipping at scale),WEB-003,D
+huawei-ascend-950dt,huawei,NPU,<7 (SMIC),smic,1 PFLOPS FP8 / 2 PFLOPS MXFP4; native FP8/MXFP8/MXFP4/HiF8,"HiZQ 2.0 HBM, 144GB, 4TB/s bandwidth","UnifiedBus/UB-Mesh, 2TB/s per-chip interconnect bandwidth",announced (avail. Q4-2026),H100/H200-class (per-chip); system rivals GB200 NVL72,WEB-012,C
+ascend-910c,huawei,NPU,7,smic,~800 TFLOPS FP16 (~80% of H100 spec); ~60% of H100 inference throughput per DeepSeek benchmark,"HBM (indigenous, unspecified gen)","CloudMatrix 384 (UB optical, all-to-all)",shipping,"H100/H200-class (Jensen Huang: ""probably comparable to H200"")","WEB-028,WEB-029",C
+ascend-950dt,huawei,NPU,<7,smic,"Training+decode variant; Atlas 950 SuperPoD = 8,192x this chip, 8 FP8 ExaFLOPS / 16 FP4 ExaFLOPS","144GB HiZQ 2.0 HBM, 4.0 TB/s bandwidth; Dual-Die UMA",Atlas 950 SuperPoD (20x CloudMatrix 384 unit count),announced (targeted Aug 2026),B200/next-gen-class (claimed),"WEB-002,WEB-003",C
+cloudmatrix-384,huawei,supernode/system,7 (910C-based),smic,~300 PFLOPS BF16 system-level; 384x Ascend 910C + 192x Kunpeng CPU,48TB pooled HBM,"Unified Bus (UB), fully non-blocking all-to-all optical","shipping (since Apr 2025, Inner Mongolia Ulanqab DC)",Exceeds Nvidia GB200 NVL72 (~180 PFLOPS) per vendor claim,WEB-001,C
+cambricon-mlu590,cambricon,NPU,7 (SMIC N+2),smic,Flagship 2026 shipment volume chip; ~300k of ~500k total 2026 unit target,HBM/GDDR (unspecified gen),proprietary,shipping,A100/H100-class (D-grade estimate),WEB-005,C
+cambricon-mlu690,cambricon,NPU,"7 (SMIC N+2, rumored next-gen)",smic,Next-gen; large-scale mass production reportedly slipping to H2 2026,unspecified,proprietary,sampling/announced,"Next-gen, unconfirmed",WEB-005,D
+mtt-s4000,moore-threads,GPU,unspecified (3rd-gen MUSA arch),smic (post-2023 Entity List; no TSMC access),"128 Tensor Cores; used in 1,000-GPU ""Intelligent Computing Center"" clusters; reported competitive vs. unspecified Nvidia parts in LLM training","48GB, 768 GB/s bandwidth",proprietary MUSA fabric,shipping,Ampere/Hopper-adjacent (D-grade estimate),WEB-045,C
+mtt-s5000,moore-threads,GPU,unspecified,smic,"DeepSeek V3: ~1,000 tok/s decode, ~4,000 tok/s prefill (vendor-reported)",80GB HBM,proprietary MUSA fabric,shipping/sampling (2026),Hopper-class (vendor target),WEB-045,D
+mtt-huashan,moore-threads,GPU,unspecified (announced),smic (expected),2-chiplet design; claimed memory bandwidth exceeding Nvidia B200,8x HBM modules,proprietary,announced,Hopper/Blackwell-class (claimed),WEB-045,D
+biren-br100,biren,GPU,7 (TSMC),tsmc,"77bn transistors; 2 chiplets, 537mm2 each; ~2048 TOPS INT8, 1024 TFLOPS BF16, 256 TFLOPS FP32; 550W TDP; TSMC CoWoS 2.5D packaging","64GB HBM2e, 4096-bit, ~1.6-2.3 TB/s (source variance)",chiplet-to-chiplet + PCIe/OAM,shipping,H100-class (2022-era competitive target),WEB-044,C
+biren-br104,biren,GPU,7 (TSMC),tsmc,"Monolithic (non-chiplet); ~1024 TOPS INT8, 128 TFLOPS FP32; 300W TDP; ~half BR100 performance","32GB HBM2e, 2048-bit, 819 GB/s",PCIe standard card,shipping,A100-class,WEB-044,C
+iluvatar-tiangai,iluvatar,GPGPU,7,tsmc (where accessible),First Chinese chip designer to mass-produce both training and inference GPGPU on 7nm,unspecified,proprietary,shipping,Nvidia-class (unspecified generation),WEB-014,C
+kunlun-p800,kunlunxin,ASIC,unspecified,unspecified (SMIC likely),Took 70-100% share in select gov/SOE procurement segments; billion-yuan-level order volume,unspecified,unspecified,shipping,Nvidia-class,WEB-019,C

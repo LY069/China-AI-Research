@@ -1,0 +1,434 @@
+<title>The Stack China Is Building — Investor Deck</title>
+<style>
+  :root{
+    --paper:#E9EBEE; --surface:#FFFFFF; --ink:#181A1F; --muted:#565C67; --faint:#7A828E;
+    --line:#D4D8DE; --line-strong:#BCC2CB;
+    --accent:#D22E1E; --copper:#A96E28; --steel:#2C6E7A;
+    --good:#2C7A4B; --warn:#B4841F; --bad:#C0392B;
+    --shadow:0 1px 2px rgba(20,22,28,.06),0 8px 30px rgba(20,22,28,.07);
+    --sans:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --serif:ui-serif,Georgia,"Iowan Old Style","Times New Roman",serif;
+    --mono:ui-monospace,"SF Mono","Cascadia Mono","Roboto Mono",Menlo,Consolas,monospace;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{
+      --paper:#0D0F12; --surface:#161A20; --ink:#E9ECF0; --muted:#9AA2AE; --faint:#78808C;
+      --line:#252B34; --line-strong:#333B46;
+      --accent:#F0503C; --copper:#CB8C43; --steel:#3E93A2;
+      --good:#43A96A; --warn:#D0A03A; --bad:#D8503F;
+      --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 34px rgba(0,0,0,.45);
+    }
+  }
+  :root[data-theme="light"]{
+    --paper:#E9EBEE; --surface:#FFFFFF; --ink:#181A1F; --muted:#565C67; --faint:#7A828E;
+    --line:#D4D8DE; --line-strong:#BCC2CB; --accent:#D22E1E; --copper:#A96E28; --steel:#2C6E7A;
+    --good:#2C7A4B; --warn:#B4841F; --bad:#C0392B; --shadow:0 1px 2px rgba(20,22,28,.06),0 8px 30px rgba(20,22,28,.07);
+  }
+  :root[data-theme="dark"]{
+    --paper:#0D0F12; --surface:#161A20; --ink:#E9ECF0; --muted:#9AA2AE; --faint:#78808C;
+    --line:#252B34; --line-strong:#333B46; --accent:#F0503C; --copper:#CB8C43; --steel:#3E93A2;
+    --good:#43A96A; --warn:#D0A03A; --bad:#D8503F; --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 34px rgba(0,0,0,.45);
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);line-height:1.55;
+    -webkit-font-smoothing:antialiased;}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+
+  /* sticky header */
+  header.top{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--paper) 88%,transparent);
+    backdrop-filter:saturate(1.2) blur(8px);border-bottom:1px solid var(--line)}
+  header.top .row{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:11px 20px;max-width:1120px;margin:0 auto}
+  .brand{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+  .brand b{color:var(--accent);font-weight:600}
+  .counter{font-family:var(--mono);font-size:12px;color:var(--faint);font-variant-numeric:tabular-nums}
+  .progress{height:2px;background:var(--accent);width:0;transition:width .2s ease}
+  @media (prefers-reduced-motion:reduce){.progress{transition:none}}
+
+  /* slide */
+  section.slide{background:var(--surface);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);
+    margin:26px 0;padding:40px 44px;scroll-margin-top:70px}
+  @media(max-width:680px){section.slide{padding:26px 22px}}
+  .eyebrow{font-family:var(--mono);font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);
+    display:flex;gap:12px;align-items:center;margin:0 0 14px}
+  .eyebrow .n{color:var(--faint)}
+  .eyebrow .bar{height:1px;flex:1;background:var(--line-strong)}
+  h1,h2,h3{font-family:var(--sans);text-wrap:balance;letter-spacing:-.02em;margin:0}
+  h1{font-size:clamp(30px,5vw,52px);font-weight:800;line-height:1.02}
+  h2{font-size:clamp(23px,3.3vw,34px);font-weight:800;line-height:1.06}
+  h3{font-size:16px;font-weight:700;letter-spacing:-.01em}
+  p{margin:12px 0}
+  .lead{font-size:clamp(17px,2vw,20px);color:var(--ink)}
+  .sub{color:var(--muted)}
+  .fine{font-family:var(--mono);font-size:11px;color:var(--faint);letter-spacing:.03em;margin-top:18px}
+  strong{font-weight:700}
+  em.k{font-style:normal;color:var(--accent);font-weight:700}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  @media(max-width:680px){.grid2,.grid3{grid-template-columns:1fr}}
+
+  /* stat tiles */
+  .tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+  @media(max-width:680px){.tiles{grid-template-columns:1fr 1fr}}
+  .tile{border:1px solid var(--line);border-radius:10px;padding:14px 15px;background:var(--paper)}
+  .tile .v{font-family:var(--sans);font-weight:800;font-size:26px;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+  .tile .l{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-top:3px;line-height:1.35}
+  .tile.accent .v{color:var(--accent)}
+
+  /* bars */
+  .bars{display:flex;flex-direction:column;gap:11px;margin-top:6px}
+  .bar{display:grid;grid-template-columns:160px 1fr auto;align-items:center;gap:12px}
+  @media(max-width:680px){.bar{grid-template-columns:110px 1fr auto}}
+  .bar .name{font-size:14px;color:var(--muted)}
+  .bar .track{height:16px;background:var(--paper);border:1px solid var(--line);border-radius:4px;overflow:hidden}
+  .bar .fill{height:100%;background:var(--steel)}
+  .bar .fill.red{background:var(--accent)} .bar .fill.cop{background:var(--copper)}
+  .bar .val{font-family:var(--mono);font-size:12.5px;color:var(--ink);font-variant-numeric:tabular-nums;min-width:64px;text-align:right}
+
+  /* stack schematic */
+  .stack{display:flex;flex-direction:column;gap:5px;font-family:var(--mono)}
+  .layer{display:grid;grid-template-columns:52px 1fr 128px;gap:12px;align-items:center;
+    border:1px solid var(--line);border-left:3px solid var(--line-strong);border-radius:7px;padding:9px 12px;background:var(--paper)}
+  .layer .code{font-weight:600;color:var(--accent);font-size:13px}
+  .layer .lname{font-family:var(--serif);font-size:14.5px}
+  .layer .lname small{display:block;font-family:var(--mono);font-size:10.5px;color:var(--faint);letter-spacing:.02em;margin-top:2px}
+  .pos{font-size:10px;letter-spacing:.05em;text-transform:uppercase;text-align:center;padding:4px 6px;border-radius:5px;font-weight:600}
+  .pos.ahead{background:color-mix(in srgb,var(--good) 16%,transparent);color:var(--good)}
+  .pos.at{background:color-mix(in srgb,var(--steel) 18%,transparent);color:var(--steel)}
+  .pos.gap{background:color-mix(in srgb,var(--warn) 18%,transparent);color:var(--warn)}
+  .pos.behind{background:color-mix(in srgb,var(--bad) 15%,transparent);color:var(--bad)}
+  .layer.hi{border-left-color:var(--accent)}
+
+  /* table */
+  .tblwrap{overflow-x:auto;margin-top:8px}
+  table{border-collapse:collapse;width:100%;font-size:13.5px;min-width:560px}
+  th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{font-family:var(--mono);font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);font-weight:600}
+  td .chip{font-family:var(--mono);font-size:10.5px;padding:2px 7px;border-radius:20px;white-space:nowrap}
+  .chip.yes{background:color-mix(in srgb,var(--good) 16%,transparent);color:var(--good)}
+  .chip.restr{background:color-mix(in srgb,var(--warn) 18%,transparent);color:var(--warn)}
+  .chip.no{background:color-mix(in srgb,var(--bad) 15%,transparent);color:var(--bad)}
+  td.num{font-family:var(--mono);font-variant-numeric:tabular-nums;text-align:right}
+
+  /* cards */
+  .card{border:1px solid var(--line);border-radius:10px;padding:18px 18px;background:var(--paper);height:100%}
+  .card h3{margin-bottom:6px}
+  .card .tag{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--faint)}
+  ul.tight{margin:8px 0 0;padding-left:18px} ul.tight li{margin:5px 0;font-size:14.5px}
+  .callout{border-left:3px solid var(--accent);padding:4px 0 4px 16px;margin:16px 0;color:var(--ink);font-size:16px}
+  .kv{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+  .kv span{font-family:var(--mono);font-size:11px;border:1px solid var(--line);border-radius:6px;padding:4px 8px;color:var(--muted)}
+  .scntag{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.08em;font-weight:600}
+  .scntag.base{color:var(--steel)} .scntag.bull{color:var(--good)} .scntag.bear{color:var(--bad)}
+  footer{padding:30px 20px 60px;text-align:center}
+  footer .fine{margin:0}
+</style>
+
+<header class="top">
+  <div class="row">
+    <div class="brand">The Stack China <b>Built</b> · Value-Chain Map</div>
+    <div class="counter"><span id="cur">01</span> / <span id="tot">15</span></div>
+  </div>
+  <div class="progress" id="prog"></div>
+</header>
+
+<div class="wrap">
+
+  <!-- 1 TITLE -->
+  <section class="slide" id="s1">
+    <div class="eyebrow"><span>Indigenous AI Ecosystem</span><span class="bar"></span><span class="n">Data as-of mid-2026</span></div>
+    <h1>The Stack China Is Building</h1>
+    <p class="lead sub">A value-chain map of China's indigenous AI ecosystem — where capability, capital, and captive demand meet, and where a professional investor can (and cannot) get exposure.</p>
+    <div class="tiles" style="margin-top:26px">
+      <div class="tile accent"><div class="v">10</div><div class="l">Stack layers mapped, L0→L9</div></div>
+      <div class="tile"><div class="v">43</div><div class="l">Companies in the master database</div></div>
+      <div class="tile"><div class="v">192</div><div class="l">Sourced, confidence-graded metrics</div></div>
+      <div class="tile"><div class="v">1–5<span style="font-size:15px">yr</span></div><div class="l">Gap to frontier, by layer</div></div>
+    </div>
+    <p class="fine">Prepared for financial-market experts, economists & industry analysts · Every figure carries a source ID + A–D confidence grade</p>
+  </section>
+
+  <!-- 2 THESIS -->
+  <section class="slide" id="s2">
+    <div class="eyebrow"><span>The Thesis</span><span class="bar"></span><span class="n">02</span></div>
+    <h2>One line, then the map</h2>
+    <p class="callout">China is building a <em class="k">parallel, vertically-indigenized</em> AI stack under export-control pressure — one to several years behind the US frontier at almost every layer, but with the direction, coordination and capital to create a <em class="k">distinct investable ecosystem</em> whose value is migrating from consumer internet to hardware, power and embodied AI.</p>
+    <div class="grid2" style="margin-top:8px">
+      <div class="card"><span class="tag">What's constrained</span>
+        <ul class="tight">
+          <li><strong>Lithography is the binding chokepoint</strong> — and not close to resolved.</li>
+          <li><strong>Software (CUDA) is the deepest gap</strong> — 3–5+ years.</li>
+          <li><strong>Compute is rationed</strong> — ~2.5 GW inference vs. surging demand.</li>
+        </ul>
+      </div>
+      <div class="card"><span class="tag">What's working</span>
+        <ul class="tight">
+          <li><strong>System-level bet</strong> — lose at the chip, win at the rack.</li>
+          <li><strong>Power</strong> — the one unambiguous structural edge.</li>
+          <li><strong>Capital markets</strong> — a "slow-bull" IPO wave is the 2026 catalyst.</li>
+        </ul>
+      </div>
+    </div>
+    <p class="fine">Detail: /report/China_AI_Stack_Report.md · Evidence: /database/</p>
+  </section>
+
+  <!-- 3 DOCTRINES -->
+  <section class="slide" id="s3">
+    <div class="eyebrow"><span>Why It's Its Own Universe</span><span class="bar"></span><span class="n">03</span></div>
+    <h2>Two doctrines of AI</h2>
+    <div class="grid2" style="margin-top:14px">
+      <div class="card" style="border-left:3px solid var(--copper)"><span class="tag">United States</span>
+        <h3>A race to superintelligence</h3>
+        <p class="sub" style="font-size:14.5px">Frontier labs treat a few months' lead as potentially permanent. Effort concentrates on the frontier model; services & enterprise automation lead adoption.</p>
+      </div>
+      <div class="card" style="border-left:3px solid var(--accent)"><span class="tag">China</span>
+        <h3>AI as infrastructure</h3>
+        <p class="sub" style="font-size:14.5px">Like electricity or water — to be diffused across the whole economy, with a pronounced tilt to the <strong>physical world</strong> (manufacturing, robotics) where China already dominates.</p>
+      </div>
+    </div>
+    <p style="margin-top:16px">This is not rhetoric. It sets where capital flows (systems & diffusion, not only frontier training), what "winning" means (<strong>90% economy-wide AI penetration by 2030</strong>, ~70% by 2027), and why China tolerates a chip deficit while racing on rack-scale systems, power and embodied AI. Export controls reframed every dependency as a weaponizable vulnerability — so China indigenizes <em class="k">every</em> choke point, manufacturing captive demand for any firm that can climb the curve.</p>
+  </section>
+
+  <!-- 4 STACK SCHEMATIC (HERO) -->
+  <section class="slide" id="s4">
+    <div class="eyebrow"><span>The Map</span><span class="bar"></span><span class="n">04 · Hero</span></div>
+    <h2>The stack, bottom-up — and China's position</h2>
+    <p class="sub" style="margin-top:4px">Ten layers turn capital and energy into cognition. Colour = capability vs. the global frontier.</p>
+    <div class="stack" style="margin-top:16px">
+      <div class="layer"><span class="code">L0</span><span class="lname">Energy &amp; Power<small>State Grid · CATL · gencos</small></span><span class="pos ahead">China ahead</span></div>
+      <div class="layer hi"><span class="code">L1</span><span class="lname">Semi equipment &amp; EDA<small>NAURA · AMEC · ACM · SMEE · Empyrean</small></span><span class="pos behind">EUV/EDA gap</span></div>
+      <div class="layer"><span class="code">L2</span><span class="lname">Fabrication &amp; packaging<small>SMIC · Hua Hong</small></span><span class="pos behind">~2–3 nodes</span></div>
+      <div class="layer"><span class="code">L3</span><span class="lname">Memory — DRAM / NAND / HBM<small>CXMT · YMTC</small></span><span class="pos gap">HBM ~3–4 yr</span></div>
+      <div class="layer hi"><span class="code">L4</span><span class="lname">AI chips &amp; software<small>Huawei Ascend · Cambricon · Biren · MetaX</small></span><span class="pos gap">1–2 gen; SW deeper</span></div>
+      <div class="layer"><span class="code">L5</span><span class="lname">Interconnect &amp; networking<small>Montage · Huawei optical · Innolight</small></span><span class="pos at">At frontier</span></div>
+      <div class="layer"><span class="code">L6</span><span class="lname">Data center &amp; cloud<small>Alibaba · Huawei · Tencent · Baidu</small></span><span class="pos gap">Behind on scale</span></div>
+      <div class="layer"><span class="code">L7</span><span class="lname">Foundation models<small>DeepSeek · Qwen · Doubao · Zhipu · Kimi</small></span><span class="pos at">Months at frontier</span></div>
+      <div class="layer"><span class="code">L8</span><span class="lname">Applications &amp; agents<small>602m GenAI users · SOE adoption</small></span><span class="pos gap">Consumer ✓ / ent ✗</span></div>
+      <div class="layer hi"><span class="code">L9</span><span class="lname">Physical AI &amp; embodied<small>Unitree · UBTech · Momenta · Apollo Go</small></span><span class="pos ahead">Volume-lead</span></div>
+    </div>
+    <p class="fine">Highlighted rows (L1 · L4 · L9) are where the report concentrates: the binding constraint, the central battleground, and China's chosen edge.</p>
+  </section>
+
+  <!-- 5 COMPUTE S/D -->
+  <section class="slide" id="s5">
+    <div class="eyebrow"><span>Macro Frame</span><span class="bar"></span><span class="n">05</span></div>
+    <h2>A low compute base — and prices are turning</h2>
+    <div class="grid2">
+      <div>
+        <div class="tiles" style="grid-template-columns:1fr 1fr">
+          <div class="tile accent"><div class="v">~2.5<span style="font-size:15px">GW</span></div><div class="l">Compute for inference (of ~3.8 GW total accessible)</div></div>
+          <div class="tile"><div class="v">2m</div><div class="l">Domestic AI chips produced vs. &gt;5m demand</div></div>
+        </div>
+        <p style="font-size:14.5px" class="sub">After years of discounting, Alibaba, Baidu &amp; Tencent <strong>raised</strong> AI-compute list prices in 2026; model vendors priced flagships <strong>above</strong> predecessors. Behaviour consistent with <em class="k">compute — not demand — as the binding constraint.</em></p>
+      </div>
+      <div>
+        <h3 style="margin-bottom:10px">AI chips: consumption vs. domestic supply</h3>
+        <div class="bars">
+          <div class="bar"><span class="name">US + allies</span><span class="track"><span class="fill cop" style="width:100%"></span></span><span class="val">~12m/yr</span></div>
+          <div class="bar"><span class="name">China demand</span><span class="track"><span class="fill red" style="width:42%"></span></span><span class="val">&gt;5m/yr</span></div>
+          <div class="bar"><span class="name">China produced</span><span class="track"><span class="fill red" style="width:17%"></span></span><span class="val">~2m/yr</span></div>
+        </div>
+        <p class="fine">Sources: REF-BW-01 (C→D), REF-SANDS-01 (C). The gap is the investment thesis: policy converts it into captive demand.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6 LITHOGRAPHY -->
+  <section class="slide" id="s6">
+    <div class="eyebrow"><span>L1 · The Binding Constraint</span><span class="bar"></span><span class="n">06</span></div>
+    <h2>Without EUV, everything upstream is rationed</h2>
+    <div class="grid2">
+      <div>
+        <h3 style="margin-bottom:10px">7nm-class yield — SMIC (DUV) vs. TSMC (EUV)</h3>
+        <div class="bars">
+          <div class="bar"><span class="name">TSMC (EUV)</span><span class="track"><span class="fill cop" style="width:80%"></span></span><span class="val">&gt;80%</span></div>
+          <div class="bar"><span class="name">SMIC N+2</span><span class="track"><span class="fill red" style="width:35%"></span></span><span class="val">~35%</span></div>
+        </div>
+        <div class="kv">
+          <span>~2.5× cost / wafer</span><span>~30× litho steps</span><span>self-sufficiency ~35%</span>
+        </div>
+      </div>
+      <div>
+        <p>The indigenous EUV light source measured <strong>~100–150W</strong> mid-2025 vs. <strong>&gt;250W</strong> needed for high-volume manufacturing. Read the <em class="k">"2028 goal" as a lab prototype</em>, not volume parity.</p>
+        <p class="sub" style="font-size:14.5px">Equipment self-sufficiency is uneven: etch &amp; clean ~55%, deposition only ~25%, EDA the widest gap (the May-2025 US EDA ban cut Empyrean's H1 profit ~92% even as revenue grew). Two moats forming anyway: AMEC's <strong>process-knowledge compounding</strong> and NAURA's <strong>breadth-as-lock-in</strong>, both backed by the 50% domestic-equipment mandate.</p>
+      </div>
+    </div>
+    <p class="fine">Sources: WEB-014 (C), WEB-007 (D), WEB-009/011. Domestic pure-plays are Connect/QFII-restricted; NAURA/SMIC units Entity-Listed (Mar-2025).</p>
+  </section>
+
+  <!-- 7 CHIP VS RACK -->
+  <section class="slide" id="s7">
+    <div class="eyebrow"><span>L4 · L5 · The Central Battleground</span><span class="bar"></span><span class="n">07</span></div>
+    <h2>Lose at the chip, win at the rack</h2>
+    <div class="grid3">
+      <div class="card"><span class="tag">Device level</span><h3>~60% of an H100</h3><p class="sub" style="font-size:14px">Huawei Ascend 910C inference throughput vs. Nvidia H100 (DeepSeek's own benchmark). ~1–2 generations behind.</p></div>
+      <div class="card" style="border-left:3px solid var(--accent)"><span class="tag">System level</span><h3>8,192 NPUs / rack</h3><p class="sub" style="font-size:14px">CloudMatrix / Atlas 950 lash NPUs into one logical machine — 16 PB/s interconnect, competing with GB200 NVL72 at the rack.</p></div>
+      <div class="card"><span class="tag">The bill</span><h3>~4× the power</h3><p class="sub" style="font-size:14px">The rack-scale win is paid for in electricity — which is exactly where China has room (see L0).</p></div>
+    </div>
+    <p class="callout">The deep moat isn't silicon — it's <em class="k">software</em>. CANN / MindSpore vs. CUDA is a 3–5+ year gap, even as Huawei open-sources CANN and DeepSeek/Zhipu demonstrate frontier training without Nvidia.</p>
+    <p class="fine">The demand engine: state-DC domestic-chip rules escalated 50% (Aug-25) → full foreign-accelerator ban (Nov-25) → ≥80%-domestic national grid. Nvidia's China share fell ~95% (2023) → &lt;60% (H2-25) → "~0" (2026 framing) — but reporting is <strong>unreconciled</strong> (ByteDance reportedly still ordering ~$14bn of Nvidia in 2026).</p>
+  </section>
+
+  <!-- 8 POWER -->
+  <section class="slide" id="s8">
+    <div class="eyebrow"><span>L0 · The Structural Edge</span><span class="bar"></span><span class="n">08</span></div>
+    <h2>Power is the one advantage that is unambiguous</h2>
+    <div class="grid2">
+      <div>
+        <h3 style="margin-bottom:10px">Electricity generation, 2024</h3>
+        <div class="bars">
+          <div class="bar"><span class="name">China</span><span class="track"><span class="fill red" style="width:100%"></span></span><span class="val">~10,000 TWh</span></div>
+          <div class="bar"><span class="name">United States</span><span class="track"><span class="fill cop" style="width:46%"></span></span><span class="val">~4,600 TWh</span></div>
+        </div>
+        <div class="kv"><span>+1,840 GW wind+solar (2025)</span><span>$580bn grid capex</span><span>PUE ≤1.25 target</span></div>
+      </div>
+      <div>
+        <p>The US faces a <strong>power ceiling</strong> — a forecast ~49 GW data-center delivery shortfall by 2028. China does not, and is routing curtailed renewables (~9% solar / ~8.5% wind) into data centers via East-Data-West-Compute.</p>
+        <p class="callout" style="border-left-color:var(--warn)">The catch: abundant power is <em class="k">necessary, not sufficient.</em> The payoff is <strong>gated on domestic silicon</strong> closing the compute gap. This is the report's central conditional — an inference (D), not a fact.</p>
+      </div>
+    </div>
+    <p class="fine">Cleanest listed proxy: CATL (~$420bn, foreign-investable). State Grid is unlisted. Sources: WEB-001/005/021/024.</p>
+  </section>
+
+  <!-- 9 MODELS -->
+  <section class="slide" id="s9">
+    <div class="eyebrow"><span>L7 · L8 · Models &amp; Diffusion</span><span class="bar"></span><span class="n">09</span></div>
+    <h2>Commoditize intelligence — on purpose</h2>
+    <div class="grid2">
+      <div>
+        <h3 style="margin-bottom:10px">Share of OpenRouter tokens, 2026</h3>
+        <div class="bars">
+          <div class="bar"><span class="name">Chinese models</span><span class="track"><span class="fill red" style="width:55%"></span></span><span class="val">~55%*</span></div>
+          <div class="bar"><span class="name">— DeepSeek alone</span><span class="track"><span class="fill red" style="width:17%"></span></span><span class="val">~17%</span></div>
+          <div class="bar"><span class="name">US labs (3)</span><span class="track"><span class="fill cop" style="width:30%"></span></span><span class="val">~30%</span></div>
+        </div>
+        <p class="fine">*Among self-selecting, cost-sensitive routing users; rose from ~33%. Qwen: 180k+ derivative models — the largest open ecosystem globally.</p>
+      </div>
+      <div>
+        <p>A vibrant, largely <strong>open-weight</strong> field (DeepSeek, Qwen, Doubao, Zhipu, Kimi, MiniMax). Behind at the very frontier, but the gap is <em class="k">months</em> on many benchmarks and the open tier is globally competitive.</p>
+        <p class="sub" style="font-size:14.5px">Strategy: make good-enough intelligence <strong>cheap infrastructure</strong> — which caps value capture in models and pressures Western labs' pricing power. Consumer adoption is real (Doubao ~100m DAU, 145m at peak; ~602m GenAI users); enterprise monetization is the weak spot.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10 SCORECARD -->
+  <section class="slide" id="s10">
+    <div class="eyebrow"><span>Synthesis</span><span class="bar"></span><span class="n">10</span></div>
+    <h2>China-vs-US scorecard</h2>
+    <div class="tblwrap">
+      <table>
+        <thead><tr><th>Layer</th><th>Gap to frontier</th><th>Timeline to parity</th><th>Foreign-investable?</th></tr></thead>
+        <tbody>
+          <tr><td>L0 Power</td><td>China <strong>ahead</strong></td><td>—</td><td><span class="chip yes">Yes · CATL</span></td></tr>
+          <tr><td>L1 Equipment / EDA</td><td>1–3 gen (EUV/EDA widest)</td><td>EUV lab ~2028; HVM 2030s</td><td><span class="chip restr">Restricted</span></td></tr>
+          <tr><td>L2 Foundry</td><td>~2–3 nodes</td><td>Gated on EUV</td><td><span class="chip restr">Restricted (HK)</span></td></tr>
+          <tr><td>L3 Memory / HBM</td><td>HBM ~3–4 yr; DRAM closing</td><td>HBM3 ~2027+</td><td><span class="chip restr">Restr. post-IPO</span></td></tr>
+          <tr><td>L4 AI chips</td><td>~1–2 gen device; closer at rack</td><td>Software 3–5 yr</td><td><span class="chip no">Mostly closed to US</span></td></tr>
+          <tr><td>L5 Interconnect</td><td>China <strong>at frontier</strong></td><td>—</td><td><span class="chip yes">Yes · Montage</span></td></tr>
+          <tr><td>L6 Cloud</td><td>Behind on scale/cost</td><td>3–5 yr</td><td><span class="chip yes">Yes · BABA/Tencent</span></td></tr>
+          <tr><td>L7 Models</td><td>Months; open-weight competitive</td><td>Rolling</td><td><span class="chip restr">Parents yes; labs restr.</span></td></tr>
+          <tr><td>L8 Apps</td><td>Consumer ahead; enterprise behind</td><td>—</td><td><span class="chip restr">Via parents</span></td></tr>
+          <tr><td>L9 Physical AI</td><td>Volume-lead; profitability-behind</td><td>—</td><td><span class="chip yes">Most open</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- 11 CAPITAL MARKETS -->
+  <section class="slide" id="s11">
+    <div class="eyebrow"><span>Capital Markets</span><span class="bar"></span><span class="n">11</span></div>
+    <h2>The "slow-bull" IPO wave is the 2026 catalyst</h2>
+    <p class="sub">Since the Sept-2024 pivot, Beijing treats the equity market as a strategic financing tool for national champions. The result: an IPO cluster with policy-driven valuations.</p>
+    <div class="tiles" style="margin-top:8px">
+      <div class="tile accent"><div class="v">+468%</div><div class="l">Moore Threads STAR day-one</div></div>
+      <div class="tile accent"><div class="v">+693%</div><div class="l">MetaX STAR day-one</div></div>
+      <div class="tile"><div class="v">RMB 1tn</div><div class="l">Cambricon peak cap on ~$0.9bn revenue</div></div>
+      <div class="tile"><div class="v">~5 wks</div><div class="l">Zhipu, MiniMax, Biren, Iluvatar, Montage-H all list</div></div>
+    </div>
+    <p style="margin-top:14px">Montage's A/H premium <em class="k">inverted</em> (H-share from a 44% discount to a premium) — a marker of international conviction. Forward P/Es for the broad set sit ~18–19 (similar to global peers) but off a far lower earnings base: the bull case <strong>and</strong> the reason multiples are unreliable.</p>
+    <p class="fine">CXMT (~$4.3bn raise) and YMTC are the next, much larger — and most valuation-contested — tests.</p>
+  </section>
+
+  <!-- 12 INVESTABILITY OVERLAY -->
+  <section class="slide" id="s12">
+    <div class="eyebrow"><span>Decisive For Allocators</span><span class="bar"></span><span class="n">12</span></div>
+    <h2>Investability ≠ listing</h2>
+    <p class="callout">Treasury's OISP now overlaps heavily with Entity-List flags. The <em class="k">highest-momentum GPU names trade freely in Hong Kong yet are effectively closed to US capital.</em> The purest exposure is the least accessible.</p>
+    <div class="grid3">
+      <div class="card" style="border-left:3px solid var(--good)"><span class="tag">Open · high-conviction</span>
+        <ul class="tight"><li>Alibaba (L4/6/7)</li><li>Tencent (L6/7)</li><li>Montage (L5)</li><li>CATL (L0)</li><li>Baidu (L4/6/7)</li></ul></div>
+      <div class="card" style="border-left:3px solid var(--warn)"><span class="tag">Access-constrained</span>
+        <ul class="tight"><li>NAURA · AMEC · ACM (L1)</li><li>SMIC · Hua Hong (L2)</li><li>Cambricon (L4)</li><li><span class="sub">HK lines / Connect where eligible</span></li></ul></div>
+      <div class="card" style="border-left:3px solid var(--bad)"><span class="tag">Closed / pipeline</span>
+        <ul class="tight"><li>Moore Threads · MetaX · Biren</li><li>Kunlunxin · Huawei · ByteDance</li><li>CXMT · YMTC (IPO pipeline)</li></ul></div>
+    </div>
+    <p class="fine">Cleaner embodied-AI access (L9): WeRide, Pony.ai, Momenta, UBTech, Horizon Robotics.</p>
+  </section>
+
+  <!-- 13 BASKET -->
+  <section class="slide" id="s13">
+    <div class="eyebrow"><span>The Investable Basket</span><span class="bar"></span><span class="n">13</span></div>
+    <h2>Own it as a diversifier, not growth beta</h2>
+    <div class="grid2">
+      <div class="card"><span class="tag">Construction logic</span>
+        <ul class="tight">
+          <li><strong>Low correlation</strong> to the global AI supply chain — fortunes turn on Chinese policy &amp; domestic substitution.</li>
+          <li><strong>A policy put</strong> beneath the market ("slow bull" — Beijing will buy weakness, sell strength).</li>
+          <li><strong>Size for the overlay</strong> — Entity-List + OISP screen out much of L1–L4 for US capital.</li>
+        </ul>
+      </div>
+      <div class="card"><span class="tag">Where value pools</span>
+        <ul class="tight">
+          <li>Advanced foundry (SMIC — shared scarce resource)</li>
+          <li>Interconnect (Montage — genuine global incumbent)</li>
+          <li>Advanced packaging / HBM (emerging)</li>
+          <li>Power (CATL / grid — the structural edge)</li>
+          <li><span class="sub">Model &amp; app layers commoditize <em class="k">by design</em> — value pushed down to hardware, up to physical AI.</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 14 SCENARIOS + RISK -->
+  <section class="slide" id="s14">
+    <div class="eyebrow"><span>Scenarios &amp; Risk</span><span class="bar"></span><span class="n">14</span></div>
+    <h2>2027 / 2030 paths</h2>
+    <div class="grid3">
+      <div class="card"><span class="scntag base">Base</span><p style="font-size:14px;margin-top:8px">Uneven indigenization: foundry/memory/interconnect/power progress, EUV lags. Competitive rack-scale systems &amp; open models; policy-sustained capex. Equities compound off a low base, high dispersion.</p></div>
+      <div class="card"><span class="scntag bull">Bull</span><p style="font-size:14px;margin-top:8px">An EUV or HBM breakthrough, or a decisive rack-scale win, closes the compute gap; the power edge converts. Champions re-rate toward global peers — the diversifier becomes an engine.</p></div>
+      <div class="card"><span class="scntag bear">Bear</span><p style="font-size:14px;margin-top:8px">EUV stalls, yields stay low, mandate outruns capability; a Taiwan / rare-earth flashpoint or OISP tightening strands foreign capital. Policy-inflated multiples de-rate hard.</p></div>
+    </div>
+    <p style="margin-top:16px"><strong>Key gating risk:</strong> <em class="k">technology failure at EUV / HBM.</em> Most underappreciated practical risk for Western allocators: <em class="k">the Entity-List + OISP overlay stranding US capital</em> even in freely-trading names.</p>
+  </section>
+
+  <!-- 15 CLOSE -->
+  <section class="slide" id="s15">
+    <div class="eyebrow"><span>Deliverables &amp; Method</span><span class="bar"></span><span class="n">15</span></div>
+    <h2>What backs this deck</h2>
+    <div class="grid3">
+      <div class="card"><span class="tag">Report</span><h3>Long-form value-chain map</h3><p class="sub" style="font-size:14px">10-layer analysis + horizontal overlay + synthesis. /report/</p></div>
+      <div class="card"><span class="tag">Database</span><h3>43 cos · 192 metrics</h3><p class="sub" style="font-size:14px">Company master, metrics, policy, model &amp; chip catalogs, 119 sources. /database/</p></div>
+      <div class="card"><span class="tag">Evidence</span><h3>6 analyst pod memos</h3><p class="sub" style="font-size:14px">Full detail + confidence grades + cross-pod reconciliation. /research/</p></div>
+    </div>
+    <p class="callout">Every figure is source-tagged and A–D confidence-graded. Key open questions are documented, not smoothed: Nvidia's true China share, CXMT/YMTC valuations, the indigenous-EUV timeline.</p>
+    <p class="fine">Reference scaffolding: Bridgewater (×3), Sands Capital, Exponential View. Analysis, not investment advice.</p>
+  </section>
+
+</div>
+
+<footer><p class="fine">The Stack China Is Building · Value-chain map of China's indigenous AI ecosystem · Data as-of mid-2026</p></footer>
+
+<script>
+  (function(){
+    var slides=[].slice.call(document.querySelectorAll('section.slide'));
+    var cur=document.getElementById('cur'), tot=document.getElementById('tot'), prog=document.getElementById('prog');
+    tot.textContent=String(slides.length).padStart(2,'0');
+    function onScroll(){
+      var h=document.documentElement, st=h.scrollTop||document.body.scrollTop;
+      var max=h.scrollHeight-h.clientHeight; prog.style.width=(max>0?(st/max*100):0)+'%';
+      var idx=0, mid=st+window.innerHeight*0.4;
+      for(var i=0;i<slides.length;i++){ if(slides[i].offsetTop<=mid) idx=i; }
+      cur.textContent=String(idx+1).padStart(2,'0');
+    }
+    document.addEventListener('scroll',onScroll,{passive:true}); window.addEventListener('resize',onScroll); onScroll();
+  })();
+</script>

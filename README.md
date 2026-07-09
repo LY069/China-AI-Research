@@ -25,5 +25,13 @@ A layer-by-layer value-chain map of China's indigenous AI stack, built for finan
 ## Reference scaffolding
 Bridgewater (×3), Sands Capital, and Exponential View reports seed the framework and are cited in `database/sources.csv`; conclusions rest on independently-sourced evidence.
 
-## Status
-Foundation + seed database committed. Analyst pods deploying against `FRAMEWORK.md §4`.
+## Status — v1 complete
+All six analyst pods delivered; outputs integrated. Deliverables live:
+- **Report:** `report/China_AI_Stack_Report.md` (~4,500 words; 10-layer map + synthesis)
+- **Deck:** `presentation/deck.html` (15 slides, self-contained, theme-aware)
+- **Database:** `database/` — 43 companies, 192 metrics, 36 policies, 21 models, 26 chips, 119 sources; build via `python3 database/build_master.py`
+- **Evidence annexes:** `research/pod1…pod6_*.md`
+
+Known open questions and cross-pod conflicts are tracked in `database/RECONCILIATION.md`.
+Next-pass enrichment (optional): primary-filing verification of pre-listing valuations
+and tickers; `MT_Newswires` connector requires authorization for newswire data.

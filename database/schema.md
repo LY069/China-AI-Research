@@ -100,3 +100,35 @@ One row per company. The spine everything joins to.
 | date | |
 | url_or_locator | |
 | notes | |
+
+---
+
+# v2 additions (2026-07-10)
+
+## 7. `company_reference.csv` (NEW — index / classification / demand overlay; keyed by company_id)
+Built in v2 (suggestion 12 + demand mapping). One row per company_id in `company_master.csv`.
+| Field | Description |
+|-------|-------------|
+| company_id | joins to company_master |
+| isin | ISIN of primary listing line (note multiples in `notes`) |
+| gics_sector | GICS sector |
+| gics_industry | GICS industry / sub-industry |
+| msci_china | in MSCI China? yes/no |
+| msci_china_a | in MSCI China A (Onshore)? yes/no |
+| csi300 | in CSI 300? yes/no |
+| hsi | in Hang Seng Index? yes/no |
+| hstech | in Hang Seng TECH? yes/no |
+| approx_weight_note | approximate index weight(s) where known (else "n/a — proprietary") |
+| mktcap_pct_market | market cap as % of its exchange/index (approx) |
+| demand_domestic_pct | est. % of revenue from domestic-substitution AI demand |
+| demand_global_pct | est. % from global/external AI demand |
+| ai_rev_share | est. AI-related share of total revenue |
+| source_id | |
+| confidence | A–D (index weights & demand splits are typically C/D) |
+| notes | as-of dates, caveats |
+
+## v2 financial metrics (into `metrics_timeseries.csv`)
+Use existing schema; suggested `metric_id` patterns: `<co>_ai_cloud_rev_share`, `<co>_capex`, `<co>_capex_intensity`, `<co>_fcf`, `<co>_ai_rev`, `<co>_rev_growth_actual`, `<co>_rev_growth_guidance`, `<co>_rev_growth_consensus`, `<co>_demand_global_share`. Always: value · period · source · confidence. Consensus/guidance grade C at best unless a named primary source.
+
+## Confidence reminder (tightened for v2)
+A/B require a NAMED primary source (filing, prospectus, dated earnings call, official release). Aggregators/blogs = C. Forward/estimate/single-source = D. Model benchmark scores, forward valuations, consensus, private-co financials, and exact index weights are high-confabulation-risk — mark unverified rather than guess.

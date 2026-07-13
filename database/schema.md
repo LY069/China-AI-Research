@@ -132,3 +132,21 @@ Use existing schema; suggested `metric_id` patterns: `<co>_ai_cloud_rev_share`, 
 
 ## Confidence reminder (tightened for v2)
 A/B require a NAMED primary source (filing, prospectus, dated earnings call, official release). Aggregators/blogs = C. Forward/estimate/single-source = D. Model benchmark scores, forward valuations, consensus, private-co financials, and exact index weights are high-confabulation-risk — mark unverified rather than guess.
+
+## 7. `company_reference.csv` — index & reference data (Suggestion 12)
+Joined to `company_master` on `company_id`. Delivers ISIN, GICS classification,
+and major-index membership so AI-stack exposure inside China benchmarks is queryable.
+Built from `research/v2_p6_refdata_data.md`. **All ISINs and index weights are C/D**
+(no primary registrar/exchange fetch succeeded — provider PDFs 403'd).
+
+| Field | Description |
+|-------|-------------|
+| company_id | join key to company_master |
+| isin | ISIN(s), with listing line noted |
+| gics_sector / gics_industry | GICS classification |
+| msci_china / msci_china_a / csi300 / hsi / hstech | membership (yes/no/not-confirmed) |
+| approx_weight_note | index weight where locatable (mostly D) |
+| mktcap_pct_market | market cap as % of its listed market (D, order-of-magnitude) |
+| source / confidence | WEB-9xx ; A-D |
+
+`company_master` also carries compact `isin` + `gics_sector` columns joined from this table.

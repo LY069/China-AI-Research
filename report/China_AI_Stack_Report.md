@@ -203,9 +203,64 @@ Global-equity valuation convergence (US↔non-US risk-premium compression); a st
 
 ---
 
+# Part II — Demand, Economics & Access (v2 deepening)
+
+> **Reader's note.** Part I mapped the *supply* stack — who builds each layer. Part II answers the three questions a capital allocator actually asks: **where is the demand, is the revenue real, and who is allowed to own it.** Industry terms (EUV, WFE, HBM, OISP, MSCI China A, …) are defined in the **Glossary** (`report/GLOSSARY.md`). Every figure keeps its A–D confidence grade; this section leans on **filed financials and primary disclosures** wherever they exist, and refuses to invent numbers where they don't.
+
+## II.1 The demand split that changes the bet *(P3)* ‹Fig. II-1›
+
+The single most consequential v2 refinement: **not all "China-AI" names are a bet on China.** Demand divides into three buckets:
+
+- **Global-demand-led** — sell into the *world* AI build-out, not the domestic mandate: **Montage** (memory-interface chips inside global AI servers), **Innolight / Eoptolink** (optical modules — Innolight ~60% of Nvidia's 800G orders), **CATL** (global energy-storage). These price off the **global** AI-capex cycle (Nvidia, hyperscalers) and are foreign-investable.
+- **Domestic-substitution** — demand *manufactured* by import-substitution and the 80%-domestic mandate: **Cambricon, Moore Threads, Biren, CXMT, YMTC, Kunlunxin**. Fortunes turn on Chinese policy; mostly Entity-Listed / closed to US capital.
+- **Mixed / dual** — **Alibaba, SMIC, Hua Hong, ACM**: exposed to both the global cycle and domestic substitution.
+
+**Investment consequence:** the "diversifying, low-correlation-to-global-AI" thesis (Bridgewater) applies **only to the domestic-substitution bucket**. The global-demand bucket is *correlated* with Nvidia and the world cycle — it is a lever on the global build-out that happens to be listed in Shanghai/HK, not a China-policy diversifier. Confusing the two is the most common error in the China-AI trade.
+
+*Actual-vs-consensus (P3):* for the top listed names we compiled reported growth, guidance, and where available sell-side consensus (NAURA vs AMAT/Lam; Montage vs Astera Labs; SMIC vs TSMC/UMC; Alibaba vs AWS). The market is pricing **high forward growth off a low base** for the domestic-substitution names (semis on premium multiples vs global peers) and **catch-up re-rating** for the platforms. Precise consensus for many A-share names is proprietary/thin — flagged where unavailable rather than fabricated.
+
+## II.2 Hyperscaler economics & capex funding *(P1)*
+
+- **AI-cloud contribution & the non-AI question.** Alibaba Cloud re-accelerated to **+38% YoY (Q1-2026)**; Baidu AI-cloud infrastructure revenue **+79% YoY**. For Alibaba and Tencent the legacy segments (e-commerce, gaming, ads) still **fund** rather than drag the build-out — they throw off the cash that pays for capex.
+- **Funding source — the real contrast with the US.** Chinese hyperscalers fund AI capex **largely from internal operating cash flow**; the US marginal AI dollar is **increasingly externally financed** (debt/equity — e.g. Alphabet's large 2026 equity raise). That is a *resilience* point for the Chinese platforms — but off a **far smaller absolute base** (the US hyperscaler+neocloud cumulative capex benchmark is ~$2T through 2026; China's is a fraction).
+- **The sharpest primary find — a monetization gap.** Baidu's SEC **6-K** shows "AI Applications" revenue ~**RMB 2.5bn in Q1-2026, roughly flat YoY**, despite 200m+ Ernie MAU and 184% GPU-cloud growth (A-grade). Usage is real; **direct monetization lags**. *(Reviewer flag: Alibaba was reported to have turned FCF-negative on AI capex — to confirm directly against the 6-K before relying on it.)*
+
+## II.3 Model & app economics — share ≠ revenue *(P2)* ‹Fig. II-2›
+
+- **Filed reality.** **Zhipu** (HKEX:2513) FY2025: revenue **RMB 724m (+132%)**, net loss **RMB 4.72bn** — a ~6.5× loss-to-revenue ratio. **MiniMax** (HKEX:0100) FY2025: revenue **$79m (+159%)**, net loss **$1.87bn**, ~⅔ from consumer apps (Talkie/Hailuo), not enterprise API (both B-grade, filed).
+- **Open-weight monetization reality.** Open models win **token share** but earn little **directly**; monetization is indirect (cloud pull-through, enterprise support, closed tiers). **DeepSeek, Moonshot and ByteDance model-level revenue are not reliably disclosed** — DeepSeek estimates span ~80–100× across sources — so we **decline to state a figure** rather than launder an estimate into a fact.
+- **OpenClaw & the enterprise inflection.** The viral **OpenClaw** agent spurred **Alibaba (Wukong)** and **Tencent (ClawPro / WorkBuddy / ClawBot)** to ship enterprise-agent products in 2026. Traction (200+ ClawPro beta orgs, 2,000+ WorkBuddy pilots) is **vendor-self-reported** — a directional inflection, not audited demand.
+
+## II.4 Talent & R&D *(P4)* ‹Fig. II-3›
+
+- **China leads on research *output*:** **69.7%** of global AI patent filings, **23.2%** of publications, and produces **38%** of the world's elite AI researchers by origin. **But historically 72%** of China-educated elite researchers ended up at **US** institutions (only ~11% stayed).
+- **The 2025–26 reflow signal:** US visa tightening + Stanford AI Index's finding that AI-talent migration *into* the US fell **~89% since 2017** + China's new K-visa point to talent returning — but this is a **signal, not yet a measured stock** (DeepSeek's ~70% US-experienced returnees is one firm, not a population statistic).
+- **The gap that binds:** a chip-design / EDA talent shortage (recruiter estimates of 200–300k, **D**) — the human-capital mirror of the EUV/EDA tooling gap.
+
+## II.5 Global investability — the US is the outlier *(P5)*
+
+For a **globally-distributed client base**, the key correction to Part I: **the US is uniquely constrained, not the norm.**
+
+- **EU / UK / Japan / Korea / Singapore / Gulf** investors face **no domicile-specific legal bar** on most listed China-AI names — *including the Entity-Listed GPU IPOs.* Access is gated by **market mechanics** (Stock Connect seasoning, STAR/ChiNext professional-investor-only rules, QFII licensing, ~20% A-share inclusion factor), not national law.
+- **US persons** are the exception (Entity List + Treasury **OISP**) — though OISP carries a **passive-index exemption** for small, non-controlling holdings (a correction to v1's stronger "US persons excluded" framing).
+- **Taiwan** is the one **symmetric legal barrier** (restricting its *own* capital into mainland tech). Japan's **GPIF** voluntarily excluding China A-shares (2025–30) is a checkable **prudential de-risking** signal.
+- **The swing factor to monitor:** a single-sourced Reuters report (Jul-2026) that Beijing may curb **foreign access to Chinese AI models and which investors may back homegrown AI firms** — if enacted, the **first China-side capital wall** on the sector (D; undecided per its own sources). A full *who-can-own-what by investor domicile* matrix is in `research/v2_p5_global_reg.md`.
+
+## II.6 Index exposure — you may already own the stack *(P6)* ‹Fig. II-4›
+
+AI-stack names are **structurally over-represented** in every major China benchmark: **~23.5%** of MSCI China sits in just **Tencent + Alibaba**; **~17.9%** of **HSTECH** in **SMIC + Tencent**; **Innolight** is the single **largest CSI 300 weight (~5%)**, having overtaken CATL. Implication for allocators: **passive China exposure already carries heavy AI-stack beta** — the active decision is *tilt*, not *initiation*. Full ISIN / GICS / index-membership table: `database/company_reference.csv` (all C/D — index-provider PDFs were inaccessible to automated fetch).
+
+## II.7 What the red-team changed
+
+An adversarial reviewer challenged every load-bearing claim (`research/review/redteam_v2.md`). Result: **fit to integrate with fixes** — Biren's ticker corrected (→ **HKEX:6082**); CXMT's "CNY 2–3tn" reworded as *analyst dispersion*, not company guidance; Zhipu's follow-on raise and Alibaba's FCF flagged **to verify**; and a standing caveat that **all index weights are search-mediated (C/D)**. The batch's defining strength, per the review, was **confidence honesty** — the pods consistently flagged their own weak data instead of inventing precision.
+
+---
+
 ## Appendix
 - **A. Methodology & confidence grading** — see `/database/schema.md` and `/database/RECONCILIATION.md`.
-- **B. Company master & data** — `/database/company_master.csv` (43 cos.), `metrics_timeseries.csv` (192), `policy_funding_tracker.csv` (36), `model_catalog.csv` (21), `chip_catalog.csv` (26), `sources.csv` (119).
-- **C. Analyst pod memos** — full detail in `/research/pod1…pod6_*.md`.
-- **D. Key open questions** — Nvidia's true China share; CXMT/YMTC valuations; indigenous-EUV timeline; Biren ticker/entity status (see RECONCILIATION.md).
-- **E. Reference scaffolding** — Bridgewater ×3, Sands Capital, Exponential View (`sources.csv` REF-*).
+- **B. Company master & data** — `/database/company_master.csv`, `company_reference.csv` (ISIN/GICS/index membership), `metrics_timeseries.csv`, `policy_funding_tracker.csv`, `model_catalog.csv`, `chip_catalog.csv`, `sources.csv`.
+- **C. Analyst pod memos** — Part I: `/research/pod1…pod6_*.md`. Part II (v2): `/research/v2_p1…p6_*.md` (hyperscaler economics, model economics, demand-split & priced-in, talent, global regulation, index/reference data).
+- **D. Glossary** — `/report/GLOSSARY.md` (also appended to the .docx).
+- **E. Adversarial review** — `/research/review/redteam_v2.md` (challenge log + must-fixes).
+- **F. Key open questions** — Nvidia's true China share; CXMT/YMTC valuations; indigenous-EUV timeline; DeepSeek/Moonshot model revenue; Zhipu follow-on & Alibaba FCF (to verify). See `RECONCILIATION.md`. *(Biren ticker resolved → HKEX:6082.)*
+- **G. Reference scaffolding** — Bridgewater ×3, Sands Capital, Exponential View (`sources.csv` REF-*).

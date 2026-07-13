@@ -11,6 +11,7 @@ from docx.oxml import OxmlElement
 HERE=os.path.dirname(__file__)
 ROOT=os.path.dirname(HERE)
 MD=os.path.join(ROOT,"report","China_AI_Stack_Report.md")
+GLOSS=os.path.join(ROOT,"report","GLOSSARY.md")
 CH=os.path.join(HERE,"charts")
 OUT=os.path.join(ROOT,"report","China_AI_Stack_Report.docx")
 
@@ -28,6 +29,10 @@ CHARTS={
  "3.7 Foundation models":("06_token_share.png",5.9,"Figure 6 — Chinese-model share of OpenRouter tokens, 2026 (C)."),
  "4.4 Capital markets":("07_ipo_pops.png",5.9,"Figure 7 — 2025–26 China AI-stack IPOs, debut price moves. Sources: WEB (B/C)."),
  "5.2 China-vs-US scorecard":("08_scorecard.png",5.2,"Figure 8 — Scorecard: capability gap × foreign investability, by layer."),
+ "II.1 The demand split":("13_demand_spectrum.png",6.2,"Figure II-1 — Global-demand-led vs domestic-substitution: where each name's demand comes from (directional, C/D)."),
+ "II.3 Model & app economics":("10_model_econ.png",5.9,"Figure II-2 — Model-lab economics: market share ≠ revenue (Zhipu & MiniMax FY2025 filed, B)."),
+ "II.4 Talent & R&D":("12_talent.png",5.9,"Figure II-3 — China's AI research output vs its historical talent export (C)."),
+ "II.6 Index exposure":("11_index_weight.png",5.9,"Figure II-4 — AI-stack weight inside major China indices (named leaders = a floor; C)."),
 }
 
 def set_font(run,name=BODY,size=10.5,color=INK,bold=False,italic=False):
@@ -91,12 +96,16 @@ doc.add_page_break()
 
 # ---- parse markdown ----
 lines=open(MD).read().splitlines()
+if os.path.exists(GLOSS):
+    lines += ["","<<<PAGEBREAK>>>",""] + open(GLOSS).read().splitlines()
 i=0; n=len(lines); started=False   # skip md's own title block (duplicated on cover); keep callout
 while i<n:
     ln=lines[i]
     st=ln.strip()
     if not st:
         i+=1; continue
+    if st=="<<<PAGEBREAK>>>":
+        doc.add_page_break(); started=True; i+=1; continue
     if not started:
         if st.startswith("## "):
             started=True            # real content begins
@@ -114,7 +123,8 @@ while i<n:
         i+=1; continue
     if st.startswith("#"):
         m=re.match(r'(#+)\s+(.*)',st); lvl=len(m.group(1))-1; txt=m.group(2)
-        txt=re.sub(r'\*\*','',txt)
+        txt=re.sub(r'\*','',txt)
+        txt=re.sub(r'\s*‹[^›]*›','',txt).strip()
         heading(txt,min(lvl,3))
         insert_chart_for(txt)
         i+=1; continue

@@ -25,13 +25,12 @@ A layer-by-layer value-chain map of China's indigenous AI stack, built for finan
 ## Reference scaffolding
 Bridgewater (×3), Sands Capital, and Exponential View reports seed the framework and are cited in `database/sources.csv`; conclusions rest on independently-sourced evidence.
 
-## Status — v1 complete
-All six analyst pods delivered; outputs integrated. Deliverables live:
-- **Report:** `report/China_AI_Stack_Report.md` (~4,500 words; 10-layer map + synthesis)
-- **Deck:** `presentation/deck.html` (15 slides, self-contained, theme-aware)
-- **Database:** `database/` — 43 companies, 192 metrics, 36 policies, 21 models, 26 chips, 119 sources; build via `python3 database/build_master.py`
-- **Evidence annexes:** `research/pod1…pod6_*.md`
+## Status — v2 complete
+v1 (10-layer value-chain map) refined per client suggestions. Added:
+- **6 v2 analyst pods** — hyperscaler economics & capex funding, model/app economics + OpenClaw, global-vs-domestic demand split & priced-in, talent & R&D, non-US/global investability, index & reference data.
+- **Adversarial red-team review** (`research/review/redteam_v2.md`) — verdict: fit to integrate with fixes; confidence-honesty confirmed. Biren ticker corrected (HKEX:6082).
+- **Report Part II** (demand, economics, access) + **Glossary** (`report/GLOSSARY.md`) for non-experts.
+- **company_reference.csv** — ISIN/GICS/index membership (Suggestion 12).
+- **4 new charts** + value-chain flow diagram; DOCX rebuilt (12 charts + glossary).
 
-Known open questions and cross-pod conflicts are tracked in `database/RECONCILIATION.md`.
-Next-pass enrichment (optional): primary-filing verification of pre-listing valuations
-and tickers; `MT_Newswires` connector requires authorization for newswire data.
+Outstanding / next: authorize `MT_Newswires` to lift model-lab & pre-listing valuations from C/D toward A/B; verify Zhipu follow-on raise & Alibaba FCF; optional deck refresh to v2.

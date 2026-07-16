@@ -33,4 +33,6 @@ v1 (10-layer value-chain map) refined per client suggestions. Added:
 - **company_reference.csv** — ISIN/GICS/index membership (Suggestion 12).
 - **4 new charts** + value-chain flow diagram; DOCX rebuilt (12 charts + glossary).
 
-Outstanding / next: authorize `MT_Newswires` to lift model-lab & pre-listing valuations from C/D toward A/B; verify Zhipu follow-on raise & Alibaba FCF; optional deck refresh to v2.
+**Primary-source validation (Jul-2026)** — `research/review/primary_validation_2026-07.md`. MT Newswires entitlement was expired (403), so the flagged figures were validated **directly against company filings** instead (stronger source): Alibaba FCF (confirmed negative in 2 of last 3 quarters, SEC 6-K), Zhipu's ~$4.0bn follow-on placement, CXMT's STAR prospectus (IPO ~RMB295bn vs RMB2-3tn post-pop), and Zhipu/MiniMax FY2025 economics — all upgraded to **grade A**. Still open (C/D): YMTC valuation (private), Nvidia China share, EUV timeline.
+
+Outstanding / next: native `.pptx` deck built (`presentation/China_AI_Stack_Deck.pptx`); YMTC remains private (no prospectus).

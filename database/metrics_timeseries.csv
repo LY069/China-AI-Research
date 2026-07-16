@@ -191,3 +191,16 @@ iluvatar_mktcap,iluvatar,L4,Market capitalization,usd-bn,2026-06,25.6,WEB-642,C,
 moore_threads_mktcap,moore-threads,L4,Market capitalization post-issue,rmb-bn,2025-12,54,WEB-643,B,
 kunlunxin_target_valuation,kunlunxin,L4,Target IPO valuation,usd-bn,2026-06,50,WEB-651,D,Escalated from $14.7bn ask in May-2026; not yet listed
 cxmt_ipo_target_raise,cxmt,L3,Targeted STAR Market IPO raise,usd-bn,2026,4.3,WEB-655,C,RMB29.5bn; review cleared ~2026-05-27
+m-baba-fcf-q2f26,Alibaba,L6,group free cash flow,RMB bn,FQ2-2026 (Sep-2025),-21.84,WEB-668,A,outflow; vs +13.74 yr-ago; cause: cloud/AI capex + quick-commerce
+m-baba-fcf-q3f26,Alibaba,L6,group free cash flow,RMB bn,FQ3-2026 (Dec-2025),11.35,WEB-668,A,+; -71% YoY vs 39.02; capex RMB29.0bn
+m-baba-fcf-q4f26,Alibaba,L6,group free cash flow,RMB bn,FQ4-2026 (Mar-2026),-17.30,WEB-668,A,outflow again; AI build outruns OCF
+m-baba-cloud-q4f26,Alibaba,L6,Cloud Intelligence Group revenue YoY,%,Mar-2026 qtr,38,WEB-668,A,CIG RMB41.6bn; external +40%; AI=30% of CIG; 11th straight qtr triple-digit AI-product growth
+m-baidu-aicloud-q1-26,Baidu,L6,AI-cloud infrastructure revenue YoY,%,Q1-2026,79,WEB-669,A,"GPU-cloud +184%; core-AI 52% of Baidu-Core (RMB13.6bn,+49%)"
+m-cxmt-rev-q1-26,CXMT,L3,revenue,RMB bn,Q1-2026,50.8,WEB-665,A,+719% YoY; 1H-2026 guidance RMB110-120bn
+m-cxmt-ni-q1-26,CXMT,L3,net profit (attrib.),RMB bn,Q1-2026,25.0,WEB-665,A,swing from -1.6 loss Q1-2025; 1H guidance ~57
+m-cxmt-ipoval,CXMT,L3,IPO-priced valuation,RMB bn,2026-07,295,WEB-665,A,RMB29.5bn for ~10%; market expects RMB2-3tn post-pop
+m-zhipu-rev-fy25,Zhipu,L7,revenue,RMB m,FY2025,724.3,WEB-666,A,+131.9%; GM 41%
+m-zhipu-adjloss-fy25,Zhipu,L7,adjusted net loss,RMB bn,FY2025,3.18,WEB-666,A,GAAP net loss 4.72bn; gap largely non-cash
+m-zhipu-placement,Zhipu,L7,follow-on placement,US$ bn,2026-07-08,4.0,WEB-666,A,"19.78m H-shares @HK$1,588 = ~HK$31.4bn; ~6.7x IPO"
+m-minimax-rev-fy25,MiniMax,L7,revenue,US$ m,FY2025,79.0,WEB-667,A,+158.9%; >70% international
+m-minimax-adjloss-fy25,MiniMax,L7,adjusted net loss,US$ m,FY2025,250.9,WEB-667,A,GAAP net loss $1.872bn; headline is non-cash fair-value charge
